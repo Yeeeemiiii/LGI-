@@ -1,0 +1,241 @@
+/* 1. Make the container the reference point for the absolute positioning */
+.image-container {
+    position: relative;
+    display: flex;
+    /* Helps prevent weird spacing around the image */
+}
+
+/* 3. Stretch the overlay perfectly over the image and add the gradient */
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /* This creates a gradient that goes from totally transparent at the top to 70% black at the bottom */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%);
+
+    /* This ensures the gradient doesn't block right-clicks or image dragging */
+    pointer-events: none;
+}
+
+.aboutHome {
+    height: auto;
+    /* MODIFIED: Changed from 42% to 50px so the homepage layout doesn't break on large screens */
+    margin-top: 50px;
+}
+
+/* MODIFIED: Added this new custom class to safely push the card below the <Back> header on the About page */
+.about-page-spacing {
+    margin-top: 1000px;
+}
+
+.aboutHome #heading {
+    text-align: left;
+    padding: 0;
+}
+
+.aboutHome .left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.aboutHome .left {
+    margin-top: 50px;
+}
+
+.aboutHome .right {
+    padding: 30px 50px;
+}
+
+.aboutHome .items {
+    margin-top: 0px;
+}
+
+.aboutHome .item {
+    background-color: #fff;
+    margin-top: 30px;
+    padding: 20px;
+    transition: 0.5s;
+}
+
+.aboutHome .img {
+    width: 100px;
+}
+
+.aboutHome img {
+    width: 50px;
+    height: 50px;
+}
+
+.aboutHome .item h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.aboutHome .item:hover {
+    background-color: #be3526;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 5px 25px -2px rgba(0 0 0 /90%);
+}
+
+.aboutwrapper {
+    background-image: url("../../../public/images/aboutwrapper.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 20vh;
+    color: #fff;
+}
+
+.aboutwrapper .box {
+    padding: 70px 0;
+}
+
+.aboutwrapper img {
+    margin-right: 30px;
+}
+
+.aboutwrapper h1 {
+    font-size: 50px;
+}
+
+.aboutwrapper h3 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* =========================================
+   TABLET OPTIMIZATION (iPad Pro - 1024x1366)
+   ========================================= */
+@media screen and (max-width: 1024px) {
+
+    /* Reduce the massive margin-top so it doesn't push content off-screen */
+    .aboutHome {
+        /* MODIFIED: Changed from 10% to a standard 50px for consistency */
+        margin-top: 50px;
+    }
+
+    /* MODIFIED: We also need to shrink that massive 300px About page spacing on mobile, 
+       otherwise the gap will be huge on phones! */
+    .about-page-spacing {
+        margin-top: 1250px;
+    }
+
+    /* Pushes the content safely below the 100vh Hero section on the homepage */
+    .home-page-spacing {
+        margin-top: 100vh;
+    }
+
+    /* Stack the left (image) and right (text) sections */
+    .aboutHome .container {
+        flex-direction: column;
+    }
+
+    /* Allow the stacked rows to take up the full width of the screen */
+    .aboutHome .row {
+        width: 100%;
+    }
+
+    /* Add some breathing room around the text */
+    .aboutHome .right {
+        padding: 40px 20px;
+    }
+
+    /* Allow the wrapper background to stretch if the content stacks */
+    .aboutwrapper {
+        height: auto;
+        padding: 40px 0;
+    }
+}
+
+/* =========================================
+   TABLET OPTIMIZATION (iPad Air - 820x1180)
+   ========================================= */
+@media screen and (max-width: 820px) {
+
+    /* MODIFIED: We also need to shrink that massive 300px About page spacing on mobile, 
+       otherwise the gap will be huge on phones! */
+    .about-page-spacing {
+        margin-top: 1050px;
+    }
+
+    /* Pushes the content safely below the 100vh Hero section on the homepage */
+    .home-page-spacing {
+        margin-top: 100vh;
+    }
+}
+
+/* =========================================
+   PHONE OPTIMIZATION (iPhone, Pixel, Galaxy)
+   Max-width: 768px
+   ========================================= */
+@media screen and (max-width: 768px) {
+    .aboutHome {
+        /* MODIFIED: Adjusted to 50px to keep spacing uniform on mobile */
+        margin-top: 50px;
+    }
+
+    /* MODIFIED: We also need to shrink that massive 300px About page spacing on mobile, 
+       otherwise the gap will be huge on phones! */
+    .about-page-spacing {
+        margin-top: 1050px;
+    }
+
+    /* Pushes the content safely below the 100vh Hero section on the homepage */
+    .home-page-spacing {
+        margin-top: 100vh;
+    }
+
+    .aboutHome .left {
+        margin-top: 0;
+        padding: 20px;
+    }
+
+    .aboutHome .right {
+        padding: 20px 10px;
+    }
+
+    /* Stack the individual benefit items (icon on top, text below) */
+    .aboutHome .item {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    /* Center the icons inside the benefit cards */
+    .aboutHome .item .img {
+        margin: 0 auto 15px auto;
+    }
+
+    /* Stack the bottom wrapper elements and center them */
+    .aboutwrapper .box {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 0;
+    }
+
+    .aboutwrapper img {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    /* Shrink the massive 50px wrapper text so it doesn't break boundaries */
+    .aboutwrapper h1 {
+        font-size: 35px;
+    }
+}
+
+/* =========================================
+   TABLET OPTIMIZATION (Google Pixel 7 - 412x915)
+   ========================================= */
+@media screen and (max-width: 420px) {
+    
+    /* Pushes the content safely below the 100vh Hero section on the homepage */
+    .home-page-spacing {
+        margin-top: 105vh;
+    }
+}

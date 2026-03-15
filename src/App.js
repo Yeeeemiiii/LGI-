@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Header from './components/common/heading/Header'
+import "./App.css"
+import "./components/common/heading/header.css"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from './components/home/Home';
+import About from './components/about/About';
+import CourseHome from './components/allcourses/CourseHome';
+import Team from './components/team/Team';
 
-function App() {
+// Import the new pages you created
+//import StudentLogin from './components/StudentLogin'
+//import StudentDashboard from './components/StudentDashboard'
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Router>
+        <Header />
+        <Routes>
+          {/* Main Pages */}
+          <Route path='/' element={<Home />} />
+          <Route path='/About' element={<About />} />
+          <Route path='/courses' element={<CourseHome />} />
+          <Route path='/team' element={<Team />} />
+          {/* <Route path='/about' element={<h1>About Us</h1>} /> */}
+
+          {/* New Language School Pages */}
+          {/* Adding these lines uses 'Route' and fixes the warning */}
+          {/* <Route path='/login' element={<StudentLogin />} /> */}
+          {/* <Route path='/dashboard' element={<StudentDashboard />} /> */}
+        </Routes>
+      </Router>
+    </>
+  )
 }
 
-export default App;
+export default App

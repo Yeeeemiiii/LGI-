@@ -1,0 +1,277 @@
+/* --- DESKTOP GLOBAL STYLES --- */
+.head {
+    padding: 20px 0;
+    color: #fff;
+    position: relative; 
+    z-index: 2; 
+}
+
+.logo h1 {
+    font-size: 27px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.head .icon {
+    margin-left: 10px;
+}
+
+/* --- DESKTOP NAVIGATION --- */
+header {
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 30px;
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+    position: relative;
+    z-index: 2;
+}
+
+header ul {
+    padding: 30px 20px;
+}
+
+header li {
+    margin-right: 40px;
+}
+
+header ul li a {
+    color: #fff;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+header ul li a:hover {
+    color: #be3526;
+}
+
+/* --- DESKTOP BUTTON ("Get Certificate") --- */
+.start {
+    background-color: rgba(70, 145, 71, 0.9);
+    padding: 30px 70px;
+    color: #fff;
+    font-weight: 900;
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+    white-space: nowrap;
+}
+
+.start:hover {
+    color: #fff;
+    background-color: #be3526;
+    font-weight: 900;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.toggle {
+    display: none;
+}
+
+/* =========================================
+   TABLET OPTIMIZATION (iPad Pro - 1024x1366)
+   ========================================= */
+@media screen and (max-width: 1024px) {
+    header {
+        margin: 0 !important; 
+        background-color: rgba(255, 255, 255, 0.2) !important; 
+        position: relative;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        display: block !important; 
+        min-height: 55px; 
+        overflow: visible !important; 
+    }
+
+    /* [ADDED] THE FIX FOR LEFT-ALIGNMENT: Force the nav container to stretch */
+    header nav {
+        display: flex !important;
+        width: 100% !important;
+        justify-content: space-between !important;
+        align-items: stretch !important;
+    }
+
+    /* [EDITED] flex: 1 forces the links to spread evenly across all remaining space */
+    header ul.flexSB {
+        display: flex !important; 
+        flex: 1 !important; 
+        padding: 0 15px !important; 
+        align-items: center !important;
+        justify-content: space-evenly !important; 
+        width: 100% !important;
+    }
+
+    header li {
+        margin-right: 15px !important; 
+    }
+    
+    header ul li a {
+        font-size: 15px !important; 
+        white-space: nowrap !important; 
+    }
+    
+    .toggle {
+        display: none !important;
+    }
+    
+    .start {
+        padding: 0 25px !important; 
+        clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%) !important; 
+        width: auto !important; 
+        display: flex !important; 
+        align-items: center;
+        justify-content: center;
+        margin-top: 0 !important;
+        background-color: rgba(70, 145, 71, 0.9) !important; 
+        font-size: 13px !important; 
+        white-space: nowrap !important; 
+        font-weight: bold;
+    }
+    
+    .mobile-nav {
+        display: none !important;
+    }
+}
+
+/* =========================================
+   TABLET OPTIMIZATION (iPad Air - 820x1180)
+   ========================================= */
+@media screen and (max-width: 820px) {
+    header ul.flexSB {
+        padding: 0 5px !important; 
+    }
+
+    header li {
+        margin-right: 10px !important; 
+    }
+    
+    header ul li a {
+        font-size: 11px !important; /* Shrunk for tighter screen */
+    }
+    
+    .start {
+        padding: 0 15px !important; 
+        font-size: 11px !important; /* Matches link font */
+    }
+}
+
+/* =========================================
+   PHONE OPTIMIZATION (iPhone, Pixel, Galaxy)
+   Max-width: 768px
+   ========================================= */
+@media screen and (max-width: 768px) {
+    .head .container.flexSB {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    
+    .head {
+        position: absolute; 
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        z-index: 999;
+        background-color: transparent !important;
+        padding: 20px 0;
+        padding-top: env(safe-area-inset-top); 
+        pointer-events: none; 
+    }
+
+    .logo h1 {
+        pointer-events: auto;
+        font-size: 20px;
+        color: #be3526 !important; 
+        text-align: center;
+        margin: 10px 0 5px 0;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.8); 
+        line-height: 1.2;
+        width: 100%;
+    }
+
+    header {
+        position: absolute;
+        top: 140px; 
+        left: 0;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0;
+        z-index: 998;
+        background-color: transparent !important;
+        padding-top: 0;
+        box-sizing: border-box !important;
+        overflow: visible !important; 
+    }
+
+    /* [ADDED] Resets the nav container for mobile stack */
+    header nav {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    .head .social {
+        display: flex !important;
+        flex-direction: row !important; 
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 15px !important; 
+        margin-top: 5px !important;
+        margin-bottom: 10px !important;
+        pointer-events: auto;
+        width: 100% !important;
+    }
+
+    .head .social i {
+        margin: 0 !important; 
+    }
+
+    .toggle {
+        display: block !important;
+        background: none;
+        color: #fff; 
+        font-size: 30px;
+        position: absolute;
+        right: 15px;
+        top: -30px;
+        padding: 10px;
+        z-index: 1000;
+        cursor: pointer;
+        pointer-events: auto;
+    }
+
+    .start {
+        clip-path: none !important;
+        padding: 15px 0 !important;      
+        text-align: center;   
+        width: 100% !important;          
+        display: block !important;       
+        margin-top: 0;
+        background-color: #469147 !important; 
+        font-size: 16px !important;
+        pointer-events: auto; 
+    }
+
+    .mobile-nav {
+        display: block !important; 
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        width: 100%;
+        background-color: #469147;
+        padding: 10px 0;
+        pointer-events: auto; 
+        z-index: 1000;
+        box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+    }
+    
+    .mobile-nav li {
+        padding: 15px 20px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        margin: 0 !important; 
+    }
+    
+    header ul.flexSB {
+        display: none !important; 
+    }
+}
