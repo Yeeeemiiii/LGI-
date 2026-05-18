@@ -1,0 +1,80 @@
+.price .items {
+  padding: 40px;
+  text-align: center;
+}
+.price h4 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.price h1 {
+  font-size: 50px;
+  font-weight: 600;
+  color: rgba(70, 145, 71, 0.6);
+  margin-bottom: 20px;
+}
+.price h1 span {
+  font-size: 20px;
+}
+.price p {
+  margin-bottom: 30px;
+  color: #999999;
+}
+.price .outline-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px 0;
+  border: 1px solid rgba(70, 145, 71, 0.6);
+  color: rgba(70, 145, 71, 0.6);
+  transition: 0.5s;
+}
+.price .outline-btn:hover {
+  background-color: rgba(70, 145, 71, 0.6);
+  color: #fff;
+}
+
+.faq {
+  padding-bottom: 10vh;
+}
+.faq .box {
+  margin-bottom: 20px;
+}
+.faq .accordion {
+  background-color: #f8f8f8;
+  color: rgba(70, 145, 71, 0.6);
+  cursor: pointer;
+  padding: 20px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.5s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 5px 25px -2px rgb(0 0 0 / 6%);
+  border-radius: 5px;
+}
+.faq .accordion:hover {
+  background-color: rgba(70, 145, 71, 0.6);
+  color: #fff;
+}
+.faq .accordion h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.faq .accordion i {
+  font-size: 20px;
+  color: rgba(70, 145, 71, 0.6);
+}
+.faq .text {
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 5px 25px -2px rgb(0 0 0 / 6%);
+  border-radius: 5px;
+}
+.faq .text p {
+  color: #999999;
+  font-size: 15px;
+  line-height: 25px;
+}

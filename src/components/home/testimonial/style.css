@@ -1,0 +1,65 @@
+.testimonal {
+  background-color: #f8f8f8;
+}
+.testimonal .items {
+  background-color: #fff;
+  padding: 30px;
+  transition: 0.5s;
+  margin-top: 40px;
+  border-radius: 5%;
+}
+.testimonal .box {
+  align-items: center;
+  margin-bottom: 20px;
+}
+.testimonal .img {
+  position: relative;
+}
+.testimonal img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.testimonal .i {
+  position: absolute;
+  bottom: 0;
+  left: 60px;
+  color: rgba(70, 145, 71, 0.6);
+  background-color: transparent; /* Ensures there is no background color */
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+.testimonal .name {
+  margin-left: 20px;
+}
+.testimonal .name h2 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.testimonal .name span {
+  color: rgba(70, 145, 71, 0.6);
+  font-weight: 500;
+}
+.testimonal p {
+  margin-top: 20px;
+  color: #999999;
+  font-size: 16px;
+  transition: 0.5s;
+}
+.testimonal .items:hover {
+  color: #fff;
+  background-color: rgba(70, 145, 71, 0.6);
+  cursor: pointer;
+}
+.testimonal .items:hover p,
+.testimonal .items:hover span {
+  color: #fff;
+}
+.testimonal .items:hover i {
+  background-color: #fff;
+  color: rgba(70, 145, 71, 0.6);
+}

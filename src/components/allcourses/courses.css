@@ -105,7 +105,6 @@
 }
 
 .online span {
-    background-color: #f8f8f8;
     padding: 5px 20px;
     font-weight: 500;
     font-size: 15px;
@@ -138,8 +137,9 @@
     color: #be3526;
 }
 
-.online .box:hover h1 {
-    color: #000;
+.online .box:hover h1,
+.online .box:hover span {
+    color: #fff;
 }
 
 /* =========================================
@@ -459,5 +459,196 @@
         font-size: 13px;
         padding: 10px;
         width: 100%;
+    }
+}
+
+/* =========================================
+   PHONE OPTIMIZATION (iPhone 12/13 Mini - 390x844)
+   Max-width: 390px
+   ========================================= */
+@media screen and (max-width: 390px) {
+    /* Slightly slimmer card to fit the 390px viewport */
+    .coursesCard .items {
+        max-width: 300px; 
+        padding: 15px; 
+    }
+    
+    /* Scale down the top circle icon */
+    .coursesCard .img {
+        width: 50px;
+        height: 50px;
+        padding: 8px;
+        margin: 0 auto 12px auto;
+    }
+    
+    /* Scale down the main course title */
+    .coursesCard .text h1 {
+        font-size: 17px;
+        line-height: 24px;
+    }
+
+    /* Shrink the LGI logo slightly more */
+    .coursesCard .details .dimg img {
+        height: 30px; 
+    }
+
+    /* Shrink the text details */
+    .coursesCard .details .box h4 {
+        font-size: 12px;
+    }
+
+    .coursesCard .details span {
+        font-size: 11px;
+    }
+    
+    /* Scale down the price banner */
+    .coursesCard .price {
+        margin: 12px 0;
+        padding: 6px;
+    }
+    
+    .coursesCard .price h3 {
+        font-size: 13px;
+    }
+
+    /* Keep the button proportional */
+    .coursesCard .items button.outline-btn {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+
+/* =========================================
+   PLACEMENT TEST & SUPPORT SECTION (VERTICAL)
+   ========================================= */
+.placement-support {
+    background-color: #f8f8f8;
+}
+
+/* Removes the box styling */
+.placement-support .placement-box,
+.placement-support .support-box {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+}
+
+/* Adds breathing room between the stacked sections */
+.placement-support .support-box {
+    margin-top: 60px;
+}
+
+.placement-support h2 {
+    color: #1ba415;
+    font-size: 25px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.placement-support h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.placement-support p {
+    color: grey;
+    line-height: 25px;
+}
+
+.placement-support ul {
+    margin: 20px 0;
+}
+
+.placement-support ul li {
+    margin-bottom: 15px;
+    color: grey;
+    font-size: 15px;
+}
+
+.placement-support ul li i {
+    color: #1ba415;
+    margin-right: 10px;
+}
+
+.placement-support h4 {
+    color: #be3526;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Adjusts the button so it hugs the text instead of stretching full screen */
+.placement-support .outline-btn {
+    width: max-content;
+    padding: 15px 40px;
+}
+
+.placement-support .contact-info {
+    margin-top: 20px;
+}
+
+.placement-support .contact-info p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #000;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.placement-support .contact-info i {
+    color: #1ba415;
+    margin-right: 15px;
+    font-size: 20px;
+    background-color: rgba(27, 164, 21, 0.1);
+    padding: 15px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 20px;
+}
+
+/* Ensures the contact links keep your custom styling */
+.placement-support .contact-info a {
+    color: #000;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.placement-support .contact-info a:hover {
+    color: #be3526; /* Turns green when someone hovers over it */
+}
+
+/* =========================================
+   ONLINE COURSES (CATALOGUE) 5-COLUMN LAYOUT
+   ========================================= */
+
+/* Desktop layout: 5 equal columns */
+.online .content {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Tablet Layout: Drop down to 3 columns so the boxes have room to breathe */
+@media screen and (max-width: 1024px) {
+    .online .content {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+
+/* Small Tablet / Large Phone: Drop down to 2 columns */
+@media screen and (max-width: 820px) {
+    .online .content {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* Mobile Phones: 1 column stacked */
+@media screen and (max-width: 768px) {
+    .online .content {
+        grid-template-columns: 1fr !important;
     }
 }

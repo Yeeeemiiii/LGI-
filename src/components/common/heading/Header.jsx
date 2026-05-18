@@ -18,7 +18,7 @@ const Header = () => {
               <li><Link to="/community">Community</Link></li>
               <li><Link to="/library">Library</Link></li>
               <li><Link to="/resources">Resources</Link></li>
-              <li><Link to="/contact">Contact Us</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
             </ul>
             <div className="start">
               <div className="button">GET CERTIFICATE</div>

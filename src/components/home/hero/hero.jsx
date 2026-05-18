@@ -20,7 +20,7 @@ const Hero = () => {
                         </button>
                         
                         {/* 3. Add an onClick event that tells the router where to go */}
-                        <button className='primary-btn' onClick={() => navigate('/courses')}>
+                        <button className='primary-btn' onClick={() => navigate('/Library')}>
                             VIEW COURSES <i className='fa fa-long-arrow-alt-right'></i>
                         </button>
                     </div>

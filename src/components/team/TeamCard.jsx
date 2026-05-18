@@ -4,20 +4,19 @@ import { team } from '../../dummydata'
 const TeamCard = () => {
     return (
         <>
-            {team.map((val) => (
-                <div className="items shadow">
+            {team.map((val, index) => (
+                <div className="items shadow" key={index}>
                     <div className="img">
-                        <img src={val.cover} alt="" />
-                        <div className="overlay">
-                            <i className="fab fa-facebook-f icon"></i>
-                            <i className="fab fa-instagram icon"></i>
-                            <i className="fab fa-twitter icon"></i>
-                            <i className="fab fa-tiktok icon"></i>
-                        </div>
+                        <img src={val.cover} alt={val.name} />
                     </div>
                     <div className="details">
                         <h2>{val.name}</h2>
                         <p>{val.work}</p>
+                        {val.email && (
+                            <p className="email-link">
+                                <a href={`mailto:${val.email}`}>{val.email}</a>
+                            </p>
+                        )}
                     </div>
                 </div>
             ))}

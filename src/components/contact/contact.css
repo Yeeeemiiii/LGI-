@@ -1,0 +1,91 @@
+.contacts .container {
+  padding: 0;
+}
+.contacts .left {
+  width: 50%;
+}
+.contacts .left iframe {
+  width: 100%;
+  height: 100%;
+}
+.contacts .right {
+  width: 50%;
+  padding: 50px;
+}
+.contacts h1 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.contacts p {
+  color: #999999;
+  margin-bottom: 20px;
+}
+
+/* Updated to a 2x2 grid to fit the Opening Hours evenly */
+.contacts .items {
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+.contacts .box h4 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+/* Styling for the Email and Phone links so they match the text but hover green */
+.contacts .box p a {
+  color: #999999;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.contacts .box p a:hover {
+  color: rgba(70, 145, 71, 1);
+}
+
+.contacts form input,
+.contacts form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+.contacts form .flexSB input:nth-child(1) {
+  margin-right: 10px;
+}
+.contacts form .primary-btn {
+  width: auto;
+  margin-top: 0;
+}
+.contacts h3 {
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+/* Social Icons Styling */
+.contacts .social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.contacts .social-icons a {
+  color: rgba(70, 145, 71, 0.8);
+  background-color: rgba(70, 145, 71, 0.1);
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.4s;
+  font-size: 18px;
+}
+
+.contacts .social-icons a:hover {
+  background-color: rgba(70, 145, 71, 1);
+  color: #fff;
+}

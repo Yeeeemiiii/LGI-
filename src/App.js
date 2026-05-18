@@ -7,6 +7,10 @@ import Home from './components/home/Home';
 import About from './components/about/About';
 import CourseHome from './components/allcourses/CourseHome';
 import Team from './components/team/Team';
+import Pricing from './components/pricing/Pricing';
+import Blog from './components/blog/Blog';
+import Contact from './components/contact/Contact';
+import Footer from './components/footer/Footer';
 
 // Import the new pages you created
 //import StudentLogin from './components/StudentLogin'
@@ -21,8 +25,11 @@ const App = () => {
           {/* Main Pages */}
           <Route path='/' element={<Home />} />
           <Route path='/About' element={<About />} />
-          <Route path='/courses' element={<CourseHome />} />
+          <Route path='/Library' element={<CourseHome />} />
           <Route path='/team' element={<Team />} />
+          <Route path='/resources' element={<Pricing />} />
+          <Route path='/community' element={<Blog />} />
+          <Route path='/Contact' element={<Contact />} />
           {/* <Route path='/about' element={<h1>About Us</h1>} /> */}
 
           {/* New Language School Pages */}
@@ -30,6 +37,7 @@ const App = () => {
           {/* <Route path='/login' element={<StudentLogin />} /> */}
           {/* <Route path='/dashboard' element={<StudentDashboard />} /> */}
         </Routes>
+        <Footer />
       </Router>
     </>
   )
