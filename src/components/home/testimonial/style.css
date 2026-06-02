@@ -63,3 +63,121 @@
   background-color: #fff;
   color: rgba(70, 145, 71, 0.6);
 }
+
+/* =========================================
+   TABLET OPTIMIZATION (iPad Pro - 1024x1366)
+   Max-width: 1024px
+   ========================================= */
+@media screen and (max-width: 1024px) {
+  .testimonal {
+    padding: 40px 0;
+    overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .testimonal .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  /* Force 2 columns and prevent grid blowout */
+  .testimonal .grid2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Keep inner cards locked down */
+  .testimonal .items {
+    min-width: 0;
+    padding: 25px;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+  }
+
+  /* Give the avatar wrapper a fixed size so it doesn't squish */
+  .testimonal .img {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0; 
+  }
+}
+
+/* =========================================
+   TABLET OPTIMIZATION (iPad Air - 820x1180)
+   Max-width: 820px
+   ========================================= */
+@media screen and (max-width: 820px) {
+  .testimonal .name h2 {
+    font-size: 18px;
+  }
+  .testimonal p {
+    font-size: 15px;
+  }
+}
+
+/* =========================================
+   PHONE OPTIMIZATION (iPhone, Pixel, Galaxy)
+   Max-width: 768px
+   ========================================= */
+@media screen and (max-width: 768px) {
+  /* Drop to 1 column for standard mobile */
+  .testimonal .grid2 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .testimonal .items {
+    padding: 20px;
+  }
+}
+
+/* =========================================
+   PHONE OPTIMIZATION (Google Pixel 7 - 412x915)
+   Max-width: 412px
+   ========================================= */
+@media screen and (max-width: 412px) {
+  .testimonal .container {
+    padding: 0 15px;
+  }
+  
+  .testimonal .items {
+    padding: 20px 15px;
+  }
+
+  /* Stack the avatar above the name for narrow screens */
+  .testimonal .box {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .testimonal .name {
+    margin-left: 0;
+  }
+
+  .testimonal p {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+/* =========================================
+   PHONE OPTIMIZATION (iPhone 12/13 Mini - 390x844)
+   Max-width: 390px
+   ========================================= */
+@media screen and (max-width: 390px) {
+  .testimonal .name h2 {
+    font-size: 16px;
+  }
+  .testimonal .name span {
+    font-size: 14px;
+  }
+  .testimonal p {
+    font-size: 13px;
+    line-height: 22px;
+  }
+}

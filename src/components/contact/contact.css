@@ -89,3 +89,143 @@
   background-color: rgba(70, 145, 71, 1);
   color: #fff;
 }
+
+/* =========================================
+   NEW: ONLINE COUNSELLING & SUPPORT SESSIONS
+   ========================================= */
+.support-sessions {
+  margin-top: 50px;
+  padding: 50px;
+  background-color: #fff;
+}
+
+.support-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.support-title h1 {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.support-title h3 {
+  color: rgba(70, 145, 71, 1);
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.support-title p {
+  color: #999999;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.support-box {
+  background-color: #f8f8f8;
+  padding: 30px;
+  border-radius: 8px;
+  border-top: 4px solid #be3526;
+  transition: 0.3s;
+}
+
+.support-box:hover {
+  transform: translateY(-5px);
+  border-top: 4px solid rgba(70, 145, 71, 1);
+}
+
+.support-box h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: rgba(70, 145, 71, 1);
+}
+
+.support-box h4 {
+  font-size: 15px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #333;
+}
+
+.support-box p {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.support-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.support-box ul li {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.support-box ul li strong {
+  color: #333;
+}
+
+.support-box ul li a {
+  color: rgba(70, 145, 71, 1);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.how-to-join {
+  background-color: rgba(70, 145, 71, 0.08);
+  border-left: 5px solid rgba(70, 145, 71, 1);
+  padding: 30px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.how-to-join h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.how-to-join p {
+  color: #555;
+  font-size: 15px;
+  margin: 0;
+}
+
+/* =========================================
+   SUPPORT SESSIONS MOBILE RESPONSIVENESS
+   ========================================= */
+@media screen and (max-width: 1024px) {
+  .support-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .support-sessions {
+    padding: 30px 20px;
+  }
+  .support-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .support-title h1 {
+    font-size: 26px;
+  }
+  .how-to-join {
+    padding: 20px;
+  }
+}

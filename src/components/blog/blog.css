@@ -48,3 +48,131 @@
   font-size: 15px;
   line-height: 25px;
 }
+
+/* =========================================
+   TABLET OPTIMIZATION (iPad Pro - 1024x1366)
+   Max-width: 1024px
+   ========================================= */
+@media screen and (max-width: 1024px) {
+  .blog {
+    padding: 40px 0;
+    overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .blog .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  /* Force 2 columns and strictly prevent grid blowout */
+  .blog .grid2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .blog .items {
+    min-width: 0;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+  }
+
+  .blog .img {
+    height: 250px; /* Slightly shorter for tablets */
+  }
+}
+
+/* =========================================
+   TABLET OPTIMIZATION (iPad Air - 820x1180)
+   Max-width: 820px
+   ========================================= */
+@media screen and (max-width: 820px) {
+  .blog h1 {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  
+  .blog .admin span {
+    font-size: 12px;
+    margin-right: 10px;
+  }
+}
+
+/* =========================================
+   PHONE OPTIMIZATION (iPhone, Pixel, Galaxy)
+   Max-width: 768px
+   ========================================= */
+@media screen and (max-width: 768px) {
+  /* Drop to 1 column for standard mobile */
+  .blog .grid2 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* Make image fully responsive based on width */
+  .blog .img {
+    height: auto;
+    aspect-ratio: 16 / 9; 
+  }
+
+  .blog .text {
+    padding: 20px;
+  }
+
+  /* Allow the admin icons (user, date, comments) to wrap if they run out of space */
+  .blog .admin {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+/* =========================================
+   PHONE OPTIMIZATION (Google Pixel 7 - 412x915)
+   Max-width: 412px
+   ========================================= */
+@media screen and (max-width: 412px) {
+  .blog .container {
+    padding: 0 15px;
+  }
+
+  .blog .text {
+    padding: 15px;
+  }
+
+  .blog h1 {
+    font-size: 17px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+
+  .blog p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+/* =========================================
+   PHONE OPTIMIZATION (iPhone 12/13 Mini - 390x844)
+   Max-width: 390px
+   ========================================= */
+@media screen and (max-width: 390px) {
+  .blog h1 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  
+  .blog p {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  
+  .blog .admin span {
+    margin-right: 8px;
+    font-size: 11px;
+  }
+}
