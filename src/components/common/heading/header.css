@@ -44,6 +44,67 @@ header ul li a:hover {
     color: #be3526;
 }
 
+/* --- DESKTOP DROPDOWN MENU --- */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-icon {
+    font-size: 11px;
+    margin-left: 5px;
+    transition: 0.3s;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    
+    /* Hide it by default, slide up slightly */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: all 0.3s ease;
+    
+    /* Overrides the flexbox spacing of the main nav */
+    padding: 10px 0 !important;
+    display: block !important; 
+    z-index: 100;
+}
+
+/* Show dropdown smoothly on hover */
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li {
+    margin: 0 !important;
+    display: block !important;
+    padding: 0 !important;
+}
+
+/* Individual dropdown links */
+.dropdown-menu li a {
+    color: #333 !important; /* Dark text for readability on the white background */
+    display: block;
+    padding: 12px 20px !important;
+    font-weight: 600 !important;
+    transition: 0.3s;
+}
+
+/* Hover effect on dropdown links */
+.dropdown-menu li a:hover {
+    background-color: rgba(70, 145, 71, 0.08); /* Subtle green highlight */
+    color: #be3526 !important;                 /* LGI Red */
+    padding-left: 25px !important;             /* Slick right-slide effect */
+}
+
 /* --- DESKTOP BUTTON ("Get Certificate") --- */
 .start {
     background-color: rgba(70, 145, 71, 0.9);
@@ -273,5 +334,34 @@ header ul li a:hover {
     
     header ul.flexSB {
         display: none !important; 
+    }
+
+    /* --- MOBILE DROPDOWN STYLES --- */
+    .mobile-nav .dropdown-menu {
+        position: relative; /* Removes absolute floating */
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        background-color: rgba(0, 0, 0, 0.15); /* Darkens the menu slightly to separate it from parent nav */
+        box-shadow: none;
+        width: 100%;
+        margin-top: 15px;
+        padding: 0 !important;
+        border-radius: 0;
+    }
+
+    .mobile-nav .dropdown-menu li {
+        border-bottom: none;
+        padding: 0;
+    }
+
+    .mobile-nav .dropdown-menu li a {
+        color: #fff !important;
+        padding: 15px 40px !important; /* Indents the text so it clearly looks like a sub-menu */
+    }
+    
+    .mobile-nav .dropdown-menu li a:hover {
+        background-color: transparent;
+        padding-left: 45px !important; 
     }
 }

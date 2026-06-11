@@ -1,3 +1,9 @@
+/* =========================================
+   FIX: LGI TALKS FULL-SCREEN BACKGROUND REVEAL
+   ========================================= */
+.lgi-talks {
+  margin-top: 100vh;
+}
 .price .items {
   padding: 40px;
   text-align: center;

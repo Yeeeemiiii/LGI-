@@ -1,4 +1,5 @@
 import React from 'react'
+import {useNavigate} from 'react-router-dom'
 import Title from '../../common/title/Title'
 import OnlineCourses from '../../allcourses/OnlineCourses'
 
@@ -38,6 +39,7 @@ const currentLanguages = [
 ];
 
 const HAbout = () => {
+    const navigate = useNavigate();
     return (
         <>
             <section className="homeAbout padding">
@@ -59,7 +61,7 @@ const HAbout = () => {
                                             ))}
                                         </ul>
                                     </div>
-                                    <button className='outline-btn' style={{ width: '100%', marginTop: 'auto' }}>ENROLL NOW !</button>
+                                    <button className='outline-btn' onClick={() => navigate('/enroll')}ß style={{ width: '100%', marginTop: 'auto' }}>ENROLL NOW !</button>
                                 </div>
                             ))}
                         </div>
@@ -74,7 +76,7 @@ const HAbout = () => {
                                 <h2 style={{ fontSize: '22px', fontWeight: '600', color: '#333', marginBottom: '15px' }}>Private Classes</h2>
                                 <h1 style={{ fontSize: '32px', color: 'rgba(70, 145, 71, 1)', marginBottom: '10px' }}>240,000 NGN</h1>
                                 <p style={{ color: '#999', fontSize: '16px', marginBottom: '25px' }}>Duration: 3 Months</p>
-                                <button className='outline-btn' style={{ width: '100%' }}>GET STARTED</button>
+                                <button className='outline-btn' onClick={() => navigate('/enroll')} style={{ width: '100%' }}>GET STARTED</button>
                             </div>
 
                             {/* Group Classes Card */}
@@ -82,7 +84,7 @@ const HAbout = () => {
                                 <h2 style={{ fontSize: '22px', fontWeight: '600', color: '#333', marginBottom: '15px' }}>Group Classes</h2>
                                 <h1 style={{ fontSize: '32px', color: 'rgba(70, 145, 71, 1)', marginBottom: '10px' }}>150,000 NGN</h1>
                                 <p style={{ color: '#999', fontSize: '16px', marginBottom: '25px' }}>Duration: 3 Months</p>
-                                <button className='outline-btn' style={{ width: '100%' }}>GET STARTED</button>
+                                <button className='outline-btn' onClick={() => navigate('/enroll')} style={{ width: '100%' }}>GET STARTED</button>
                             </div>
                         </div>
                     </div>

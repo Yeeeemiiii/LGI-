@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './components/home/Home';
 import About from './components/about/About';
 import CourseHome from './components/allcourses/CourseHome';
+import Languages from './components/allcourses/Languages';
+import Enroll from './components/enroll/Enroll';
 import Team from './components/team/Team';
 import Pricing from './components/pricing/Pricing';
 import Blog from './components/blog/Blog';
@@ -26,6 +28,8 @@ const App = () => {
           <Route path='/' element={<Home />} />
           <Route path='/About' element={<About />} />
           <Route path='/Library' element={<CourseHome />} />
+          <Route path='/Languages' element={<Languages />} />
+          <Route path='/Enroll' element={<Enroll />} />
           <Route path='/team' element={<Team />} />
           <Route path='/resources' element={<Pricing />} />
           <Route path='/community' element={<Blog />} />

@@ -1,5 +1,6 @@
 .coursesCard {
     padding: 50px 0;
+    margin-top: 100vh;
 }
 
 .coursesCard .items {
@@ -75,6 +76,7 @@
 
 .online {
     text-align: center;
+    padding-bottom: 50px;
 }
 
 .online .box {
@@ -651,4 +653,18 @@
     .online .content {
         grid-template-columns: 1fr !important;
     }
+}
+
+/* =========================================
+   FIX: LANGUAGES PAGE LAYOUT & MARGINS
+   ========================================= */
+.languages-page .placement-support {
+    margin-top: 100vh; /* Shifts the full-screen image reveal to this section */
+    background-color: #f8f8f8;
+    padding-bottom: 0px; /* Removes awkward empty space below the box */
+}
+
+.languages-page .coursesCard {
+    margin-top: 0 !important; /* Kills the double 100vh gap */
+    padding-top: 50px !important; /* Snugs the course cards perfectly up to the placement test */
 }

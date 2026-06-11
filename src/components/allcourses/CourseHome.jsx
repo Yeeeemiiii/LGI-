@@ -14,18 +14,6 @@ const CourseHome = () => {
       {/* UPDATED PLACEMENT TEST & SUPPORT SECTION */}
       <section className="placement-support padding">
         <div className="container">
-          <div className="placement-box">
-            <h2>Recommended Entry Point</h2>
-            <h3>Online Placement Test</h3>
-            <p>Not sure of your level? Start with a free assessment.</p>
-            <ul>
-              <li><i className="fa fa-check"></i> Determines your exact level (e.g. A1.2, B2.1)</li>
-              <li><i className="fa fa-check"></i> Ensures correct placement in the right class</li>
-              <li><i className="fa fa-check"></i> Personalised learning pathway recommendation</li>
-            </ul>
-            <h4>Cost: Free</h4>
-            <button className='outline-btn'>BOOK PLACEMENT TEST</button>
-          </div>
 
           <div className="support-box">
             <h2>Support & Enquiries</h2>

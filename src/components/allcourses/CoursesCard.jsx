@@ -1,8 +1,10 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import "./courses.css"
 import { coursesCard } from '../../dummydata'
 
 const CoursesCard = () => {
+    const navigate = useNavigate();
     return (
         <>
             <section className="coursesCard">
@@ -50,7 +52,7 @@ const CoursesCard = () => {
                                         {val.priceAll} / {val.pricePer}
                                     </h3>
                                 </div>
-                                <button className='outline-btn'>ENROLL NOW !</button>
+                                <button className='outline-btn' onClick={() => navigate('/enroll')}>ENROLL NOW !</button>
                             </div>
                         )
                     })}

@@ -67,7 +67,7 @@ const Pricing = () => {
       </section>
 
       {/* --- ORIGINAL RESOURCES CONTENT --- */}
-      <ResourcesCard />
+      { <ResourcesCard /> }
 
       {/* --- ORIGINAL FAQ SECTION --- */}
       <Faq />

@@ -15,7 +15,7 @@ const Hero = () => {
                     <p>Languages for Growth and Impact is a Non-Governmental Organization which advocates the SDGs through providing linguistics services (translation and interpretation,  language acquisition of both foreign and Indigenous African languages.</p>
                     
                     <div className="button">
-                        <button className='primary-btn'>
+                        <button className='primary-btn' onClick={() => navigate('/enroll')}>
                             ENROLL NOW <i className='fa fa-long-arrow-alt-right'></i>
                         </button>
                         
