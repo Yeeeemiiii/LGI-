@@ -1,3 +1,9 @@
+/* =========================================
+   FIX: TEAM PAGE FULL-SCREEN BACKGROUND REVEAL
+   ========================================= */
+.contacts {
+    margin-top: 100vh;
+}
 .contacts .container {
   padding: 0;
 }

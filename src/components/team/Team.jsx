@@ -6,7 +6,7 @@ import TeamCard from './TeamCard'
 const Team = () => {
   return (
     <>
-    <Back title="Team"/>
+    <Back title="Team" cover="/images/extra.webp"/>
     <section className="team padding">
         <div className="container grid">
             <TeamCard/>

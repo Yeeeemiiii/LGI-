@@ -1,5 +1,9 @@
+/* =========================================
+   FIX: TEAM PAGE FULL-SCREEN BACKGROUND REVEAL
+   ========================================= */
 .blog {
   padding-bottom: 50px;
+    margin-top: 100vh;
 }
 .blog .items {
   background-color: #fff;

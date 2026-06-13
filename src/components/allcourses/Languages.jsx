@@ -10,7 +10,7 @@ const Languages = () => {
   return (
     <div className="languages-page">
       {/* 1. The Header Background */}
-      <Back title="Explore Courses" />
+      <Back title="Explore Courses" cover="/images/streetlibrary.webp"/>
       
       {/* 2. The NEW Placement Test Section */}
       <section className="placement-support padding">
@@ -24,7 +24,7 @@ const Languages = () => {
               <li><i className="fa fa-check"></i> Personalised learning pathway recommendation</li>
             </ul>
             <h4>Cost: Free</h4>
-            <button className='outline-btn' onClick={() => navigate('/enroll')}>BOOK PLACEMENT TEST</button>
+            <button className='outline-btn' onClick={() => navigate('/placement-test')}>BOOK PLACEMENT TEST</button>
           </div>
         </div>
       </section>

@@ -8,6 +8,7 @@ import About from './components/about/About';
 import CourseHome from './components/allcourses/CourseHome';
 import Languages from './components/allcourses/Languages';
 import Enroll from './components/enroll/Enroll';
+import PlacementTest from './components/placement/PlacementTest';
 import Team from './components/team/Team';
 import Pricing from './components/pricing/Pricing';
 import Blog from './components/blog/Blog';
@@ -34,6 +35,7 @@ const App = () => {
           <Route path='/resources' element={<Pricing />} />
           <Route path='/community' element={<Blog />} />
           <Route path='/Contact' element={<Contact />} />
+          <Route path='/placement-test' element={<PlacementTest />} />
           {/* <Route path='/about' element={<h1>About Us</h1>} /> */}
 
           {/* New Language School Pages */}

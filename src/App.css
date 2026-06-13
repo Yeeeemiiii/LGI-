@@ -109,7 +109,6 @@ p {
 }
 
 .back {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../public/images/back.webp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

@@ -632,3 +632,44 @@ export const lgiTalks = [
     link: "https://x.com/langlopact/status/1840389947720614023?s=46"
   }
 ]
+
+// --- PLACEMENT TEST READING PASSAGES ---
+const passage1 = {
+  title: "📖 Geschichte: Kolawoles erster Tag am Sprachinstitut",
+  text: "Es ist ein heller Montagmorgen in Ibadan. Kolawole ist aufgeregt. Heute ist sein erster Tag am Languages for Growth and Impact Institut. Er möchte Deutsch lernen, weil seine Familie bald nach Deutschland umzieht.\n\n„Guten Morgen!\", sagt sie mit einem Lächeln.\nKolawole lächelt zurück. „Guten Morgen, Frau Lehrerin.\"\n„Mein Name ist Frau Becker,\" sagt die Lehrerin. „Wie heißen Sie?\"\nKolawole antwortet: „Mein Name ist Kolawole.\"\n„Woher kommen Sie, Kolawole?\" fragt Frau Becker.\n„Ich komme aus Nigeria,\" antwortet er stolz.\n\nFrau Becker schreibt an die Tafel:\n• Ich bin …\n• Du bist …\n• Er / Sie / Es ist …\n\nDann fragt sie: „Wie geht es Ihnen?\"\nKolawole erinnert sich an die Wörter: „Mir geht es gut!\"\nAlle lachen glücklich.\n\nAm Ende der Stunde ist Kolawole stolz. Er kann jetzt grüßen, sich vorstellen und sagen, woher er kommt. Er denkt: „Deutschland, ich komme!\""
+};
+
+const passage2 = {
+  title: "📖 Lesetext: Yusuf",
+  text: "Hallo! Ich bin Yusuf. Ich komme aus Nigeria.\nIch wohne in Abuja. Ich spreche Englisch und ein bisschen Deutsch."
+};
+
+const passage3 = {
+  title: "📖 Geschichte: Kola spricht über seine Familie",
+  text: "Heute erzählt Kola seiner Klasse von seiner Familie.\n„Ich habe eine große Familie\", sagt er stolz.\n„Ich habe einen Vater, eine Mutter, zwei Brüder und eine Schwester.\"\n\nFrau Becker fragt: „Wie heißt dein Vater?\"\nKola antwortet: „Mein Vater heißt Emeka. Er ist Ingenieur.\"\n„Und deine Mutter?\" fragt Frau Becker.\n„Meine Mutter heißt Ngozi. Sie ist Lehrerin,\" sagt Kola.\n\n„Hast du Geschwister?\" fragt Amina.\n„Ja, ich habe zwei Brüder und eine Schwester. Mein älterer Bruder heißt Tunde. Er ist groß und freundlich. Meine Schwester heißt Bola. Sie ist jung und lustig.\"\nDie Klasse lacht. Alle reden über ihre Familien."
+};
+
+// --- PLACEMENT TEST QUESTIONS ---
+export const quizQuestions = [
+  { id: 1, passage: passage1, q: "Wie heißt Kolawoles Lehrerin?", options: ["Frau Becker", "Frau Müller", "Amina", "Ngozi"], answer: "Frau Becker" },
+  { id: 2, passage: passage1, q: "Woher kommt Kolawole?", options: ["Deutschland", "Nigeria", "USA", "England"], answer: "Nigeria" },
+  { id: 3, passage: passage1, q: "Welche Sprache lernt Kolawole?", options: ["Englisch", "Französisch", "Deutsch", "Spanisch"], answer: "Deutsch" },
+  { id: 4, passage: passage1, q: "Lückentext: Ich _________ Kolawole.", options: ["heiße", "heißen", "heißt", "heißt du"], answer: "heiße" },
+  { id: 5, passage: passage1, q: "Lückentext: Ich komme _________ Nigeria.", options: ["in", "von", "aus", "nach"], answer: "aus" },
+  { id: 6, passage: passage1, q: "Lückentext: _________ Morgen!", options: ["Guten", "Gutes", "Gute", "Guter"], answer: "Guten" },
+  { id: 7, passage: passage1, q: "Lückentext: Mir geht es _________.", options: ["gut", "guter", "gute", "guten"], answer: "gut" },
+  { id: 8, passage: passage2, q: "Lesetext (Yusuf): Wie heißt er?", options: ["Kolawole", "Tunde", "Yusuf", "Emeka"], answer: "Yusuf" },
+  { id: 9, passage: passage2, q: "Lesetext (Yusuf): Wo wohnt er?", options: ["Ibadan", "Berlin", "Abuja", "Lagos"], answer: "Abuja" },
+  { id: 10, passage: passage2, q: "Lesetext (Yusuf): Welche Sprachen spricht er?", options: ["Nur Englisch", "Englisch und ein bisschen Deutsch", "Nur Deutsch", "Igbo und Yoruba"], answer: "Englisch und ein bisschen Deutsch" },
+  { id: 11, passage: passage3, q: "Familie: Wie heißt Kolas Vater?", options: ["Emeka", "Tunde", "Yusuf", "Kolawole"], answer: "Emeka" },
+  { id: 12, passage: passage3, q: "Familie: Was ist Kolas Mutter von Beruf?", options: ["Ingenieurin", "Lehrerin", "Ärztin", "Köchin"], answer: "Lehrerin" },
+  { id: 13, passage: passage3, q: "Lückentext (Familie): Ich _________ zwei Brüder.", options: ["hat", "habe", "haben", "hast"], answer: "habe" },
+  { id: 14, passage: passage3, q: "Lückentext (Familie): Das ist _________ Mutter.", options: ["meine", "meiner", "mein", "meinen"], answer: "meine" },
+  { id: 15, passage: passage3, q: "Lückentext (Familie): Hast _________ Geschwister?", options: ["dein", "du", "dir", "dich"], answer: "du" },
+  // Questions 16-20 are general grammar, so they do NOT get a passage attached!
+  { id: 16, q: "Grammatik (Akkusativ): Ich möchte _________ Kaffee.", options: ["einen", "ein", "eine", "einem"], answer: "einen" },
+  { id: 17, q: "Grammatik (Akkusativ): Wir bestellen _________ Cola.", options: ["eine", "ein", "einen", "einem"], answer: "eine" },
+  { id: 18, q: "Grammatik (Verneinung): Ich habe _________ Brot. (Neutrum)", options: ["keine", "kein", "keinen", "keines"], answer: "kein" },
+  { id: 19, q: "Grammatik (Verneinung): Wir möchten _________ Suppe. (Femininum)", options: ["keine", "kein", "keinen", "keinem"], answer: "keine" },
+  { id: 20, q: "Übersetzung: 'The bill, please.'", options: ["Die Speisekarte, bitte.", "Die Rechnung, bitte.", "Das Wasser, bitte.", "Der Saft, bitte."], answer: "Die Rechnung, bitte." }
+];

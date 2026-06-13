@@ -7,7 +7,7 @@ import "./courses.css"
 const CourseHome = () => {
   return (
     <>
-      <Back title="Explore Courses" />
+      <Back title="Explore Courses" cover="/images/classes.webp"/>
       <CoursesCard />
       <OnlineCourses />
 

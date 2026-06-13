@@ -9,7 +9,7 @@ import { lgiTalks } from "../../dummydata"
 const Pricing = () => {
   return (
     <>
-      <Back title='Resources' />
+      <Back title='Resources' cover="/images/podcast.webp"/>
 
       {/* --- NEW SECTION: LGI TALKS --- */}
       <section className='lgi-talks padding' style={{ backgroundColor: '#f8f8f8' }}>
