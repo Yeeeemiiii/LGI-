@@ -11,7 +11,9 @@ import Enroll from './components/enroll/Enroll';
 import PlacementTest from './components/placement/PlacementTest';
 import Team from './components/team/Team';
 import Pricing from './components/pricing/Pricing';
+import Programs from './components/programs/Programs';
 import Blog from './components/blog/Blog';
+import Community from './components/community/Community';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
 import Library from './components/library/Library'; // Import the Library component
@@ -34,7 +36,9 @@ const App = () => {
           <Route path='/Enroll' element={<Enroll />} />
           <Route path='/team' element={<Team />} />
           <Route path='/resources' element={<Pricing />} />
-          <Route path='/community' element={<Blog />} />
+          <Route path='/programs' element={<Programs />} />
+          <Route path='/blog' element={<Blog />} />
+          <Route path='/community' element={<Community />} />
           <Route path='/Contact' element={<Contact />} />
           <Route path='/placement-test' element={<PlacementTest />} />
           {/* New Library Page */}

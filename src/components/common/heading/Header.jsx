@@ -15,15 +15,23 @@ const Header = () => {
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About Us</Link></li>
             <li><Link to="/team">LGI Team</Link></li>
-            <li><Link to="/community">Community</Link></li>
-            <li><Link to="/courses">Courses</Link></li><li className='dropdown'>
+            <li><Link to="/programs">Programs</Link></li>
+            <li className='dropdown'>
+              <Link to="/community">
+                Community <i className='fa fa-chevron-down dropdown-icon'></i>
+              </Link>
+              <ul className='dropdown-menu'>
+                <li><Link to="/blog">Blog</Link></li>
+              </ul>
+            </li>
+            <li><Link to="/courses">Courses</Link></li>
+            <li className='dropdown'>
               <Link to="/resources">
                 Resources <i className='fa fa-chevron-down dropdown-icon'></i>
               </Link>
               <ul className='dropdown-menu'>
                 <li><Link to="/languages">Languages</Link></li>
                 <li><Link to="/Library">Library</Link></li>
-                {/* You can easily add more sub-links right here in the future! */}
               </ul>
             </li>
             <li><Link to="/contact">Contact</Link></li>
