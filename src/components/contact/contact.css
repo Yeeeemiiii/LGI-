@@ -213,15 +213,79 @@
 }
 
 /* =========================================
-   SUPPORT SESSIONS MOBILE RESPONSIVENESS
+   TABLET OPTIMIZATION (iPad Pro - 1024x1366)
+   Max-width: 1024px
    ========================================= */
 @media screen and (max-width: 1024px) {
+  .contacts .right {
+    padding: 30px;
+  }
   .support-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
+/* =========================================
+   TABLET OPTIMIZATION (iPad Air - 820x1180)
+   Max-width: 820px
+   ========================================= */
+@media screen and (max-width: 820px) {
+  /* 1. Stack the map and the contact form vertically */
+  .contacts .container.flexSB {
+    flex-direction: column;
+  }
+  .contacts .left,
+  .contacts .right {
+    width: 100%;
+  }
+  /* 2. Give the map a specific height so it doesn't vanish when stacked */
+  .contacts .left {
+    height: 45vh;
+  }
+  .contacts .right {
+    padding: 40px;
+  }
+  /* 3. Stack the Name and Email inputs inside the form */
+  .contacts form .flexSB {
+    flex-direction: column;
+    margin-top: 0; 
+  }
+  .contacts form .flexSB input {
+    width: 100%;
+  }
+  .contacts form .flexSB input:nth-child(1) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+/* =========================================
+   PHONE OPTIMIZATION (Standard Tablets/Large Phones)
+   Max-width: 768px
+   ========================================= */
 @media screen and (max-width: 768px) {
+  .contacts .container.flexSB {
+    flex-direction: column;
+  }
+  .contacts .left,
+  .contacts .right {
+    width: 100%;
+  }
+  .contacts .left {
+    height: 40vh;
+  }
+  .contacts .right {
+    padding: 30px 20px;
+  }
+  .contacts form .flexSB {
+    flex-direction: column;
+  }
+  .contacts form .flexSB input:nth-child(1) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  /* Support Sessions Section Mobile Fixes */
   .support-sessions {
     padding: 30px 20px;
   }
@@ -233,5 +297,69 @@
   }
   .how-to-join {
     padding: 20px;
+  }
+}
+
+/* =========================================
+   PHONE OPTIMIZATION (Google Pixel 7 - 412x915)
+   Max-width: 412px
+   ========================================= */
+@media screen and (max-width: 412px) {
+  .contacts .right {
+    padding: 20px 15px;
+  }
+  /* Stack the Address/Email/Phone grid into a single vertical column */
+  .contacts .items {
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+  }
+  .contacts h1 {
+    font-size: 24px;
+  }
+  .support-title h1 {
+    font-size: 22px;
+  }
+  .support-title h3 {
+    font-size: 16px;
+  }
+  .support-box h2 {
+    font-size: 16px;
+  }
+  .support-box h4 {
+    font-size: 14px;
+  }
+  /* Ensure long email addresses don't push the screen wide */
+  .support-box ul li,
+  .contacts .box p a {
+    font-size: 13px;
+    word-break: break-word; 
+  }
+}
+
+/* =========================================
+   PHONE OPTIMIZATION (iPhone Mini - 390x844)
+   Max-width: 390px
+   ========================================= */
+@media screen and (max-width: 390px) {
+  .contacts .right {
+    padding: 15px 10px;
+  }
+  /* Shrink padding to give more room to the text */
+  .support-sessions {
+    padding: 25px 15px;
+  }
+  .support-box {
+    padding: 20px 15px;
+  }
+  /* Wrap social icons if they run out of space */
+  .contacts .social-icons {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .how-to-join h3 {
+    font-size: 15px;
+  }
+  .how-to-join p {
+    font-size: 13px;
   }
 }

@@ -229,11 +229,25 @@ p {
   .back {
     background-attachment: scroll !important; 
     
-    /* ---> THE "FIT" TRICK FOR MOBILE <--- */
-    background-size: cover, contain !important; 
-    background-repeat: no-repeat, no-repeat !important;
-    background-position: center, top center !important;
-    background-color: #1a1a1a !important; 
+    /* Revert back to Cover so we have no black void */
+    background-size: cover !important; 
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-color: transparent !important; 
+
+    /* THE GOLDILOCKS FIX: Reduce height from 100vh to 60vh on phones */
+    min-height: 60vh !important;
+    height: 60vh !important;
+    padding-top: 35% !important;
+  }
+
+  /* Automatically adjust all pages to snap up to the new 60vh header */
+  .team, 
+  .contacts, 
+  .coursesCard, 
+  .library-page, 
+  .languages-page .placement-support {
+    margin-top: 60vh !important;
   }
   
   .back h1 {

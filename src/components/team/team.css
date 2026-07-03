@@ -44,7 +44,6 @@
 
 .team .item {
     transition: 0.5s;
-
 }
 
 .team .img {
@@ -105,4 +104,115 @@
 .team .items:hover .email-link a {
     color: #be3526;
     font-weight: 900;
+}
+
+
+/* =========================================
+   TABLET OPTIMIZATION (iPad Pro - 1024x1366)
+   Max-width: 1024px
+   ========================================= */
+@media screen and (max-width: 1024px) {
+    .team.padding {
+        padding: 60px 20px; /* Adds side padding so cards don't touch the screen edge */
+    }
+    .team .grid {
+        grid-template-columns: repeat(3, 1fr) !important; /* Safely drops to 3 columns */
+        grid-gap: 20px;
+    }
+    .department-selector {
+        gap: 10px;
+    }
+    .department-selector .dept-tab {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+}
+
+/* =========================================
+   TABLET OPTIMIZATION (iPad Air - 820x1180)
+   Max-width: 820px
+   ========================================= */
+@media screen and (max-width: 820px) {
+    .team .grid {
+        grid-template-columns: repeat(2, 1fr) !important; /* Forces 2 columns for smaller tablets */
+        grid-gap: 20px;
+    }
+}
+
+/* =========================================
+   PHONE OPTIMIZATION (Standard Tablets/Large Phones)
+   Max-width: 768px
+   ========================================= */
+@media screen and (max-width: 768px) {
+    .team.padding {
+        padding: 40px 15px;
+    }
+    .team .grid {
+        grid-template-columns: 1fr !important; /* Stacks all cards vertically into a single column */
+        grid-gap: 30px;
+        max-width: 450px; /* Prevents the cards from getting comically huge on landscape phones */
+        margin: 0 auto;   /* Centers the column */
+    }
+    
+    .department-selector {
+        margin-bottom: 30px;
+    }
+    
+    .department-selector .dept-tab {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+}
+
+/* =========================================
+   PHONE OPTIMIZATION (Google Pixel 7 - 412x915)
+   Max-width: 412px
+   ========================================= */
+@media screen and (max-width: 412px) {
+    .department-selector {
+        gap: 10px;
+    }
+    
+    /* Forces the tabs to act like a 2-column grid instead of an uneven line */
+    .department-selector .dept-tab {
+        flex: 1 1 45%; 
+        text-align: center;
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+    
+    .team .details {
+        padding: 20px;
+    }
+    
+    .team .details h2 {
+        font-size: 18px;
+    }
+    
+    .team .details p {
+        font-size: 14px;
+    }
+    
+    .team .details .email-link {
+        font-size: 13px;
+    }
+}
+
+/* =========================================
+   PHONE OPTIMIZATION (iPhone 12/13 Mini - 390x844)
+   Max-width: 390px
+   ========================================= */
+@media screen and (max-width: 390px) {
+    .department-selector .dept-tab {
+        font-size: 12px;
+        padding: 8px 5px;
+    }
+    
+    .team .grid {
+        grid-gap: 20px;
+    }
+    
+    .team .details h2 {
+        font-size: 17px;
+    }
 }
