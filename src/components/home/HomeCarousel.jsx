@@ -9,28 +9,28 @@ const slides = [
     desc: "Master French, German, English, or Chinese with our expert-led immersion and flexible online courses tailored to your level.",
     btnText: "Explore Courses",
     link: "/courses",
-    img: "/images/bg.webp" // Replace with a real classroom/learning image
+    img: "/images/about.webp" // Replace with a real classroom/learning image
   },
   {
     title: "LGI Talks Podcast",
     desc: "Conversations that teach. Learning that lasts. Join us as we explore the intersection of language, culture, and social impact.",
     btnText: "Listen Now",
     link: "/resources",
-    img: "/images/back.webp" // Replace with a real podcast/microphone image
+    img: "/images/podcast.webp" // Replace with a real podcast/microphone image
   },
   {
     title: "Community Literacy Outreach",
     desc: "Aligning with SDG 4, we design educational programs and street libraries to support multilingual and inclusive learning globally.",
     btnText: "Learn More",
     link: "/about",
-    img: "/images/aboutwrapper.webp" // Replace with a real community image
+    img: "/images/library.webp" // Replace with a real community image
   },
   {
     title: "Translation & Interpretation",
     desc: "Professional linguistic services bridging the gap across cultures for researchers, NGOs, and field-based projects.",
     btnText: "Contact Us",
     link: "/contact",
-    img: "/images/about.webp" // Replace with a real professional/meeting image
+    img: "/images/extra.webp" // Replace with a real professional/meeting image
   }
 ];
 

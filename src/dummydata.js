@@ -207,7 +207,7 @@ export const coursesCard = [
   {
     id: 13,
     language: "Chinese",
-    cover: "./images/classg.png",
+    cover: "./images/class.png",
     coursesName: "A1 Online Group Course",
     courTeacher: [
       {
@@ -222,7 +222,7 @@ export const coursesCard = [
   {
     id: 14,
     language: "Yoruba",
-    cover: "./images/langg.png",
+    cover: "./images/lang.png",
     coursesName: "Beginner Yoruba (Conversational)",
     courTeacher: [
       {
@@ -237,7 +237,7 @@ export const coursesCard = [
   {
     id: 15,
     language: "Swahili",
-    cover: "./images/langlearng.png",
+    cover: "./images/langlearn.png",
     coursesName: "Beginner Swahili",
     courTeacher: [
       {
@@ -252,7 +252,7 @@ export const coursesCard = [
   {
     id: 16,
     language: "Ewe",
-    cover: "./images/bookg.png",
+    cover: "./images/book.png",
     coursesName: "Beginner Ewe",
     courTeacher: [
       {
