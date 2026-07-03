@@ -8,7 +8,8 @@ const Team = () => {
     <>
     <Back title="Team" cover="/images/extra.webp"/>
     <section className="team padding">
-        <div className="container grid">
+        {/* We removed the 'grid' class from this container so tabs sit correctly */}
+        <div className="container">
             <TeamCard/>
         </div>
     </section>

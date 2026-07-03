@@ -298,81 +298,99 @@ export const online = [
     course: "English, French, German, Yoruba, Hausa, Igbo, Spanish, Portuguese, Swahili, Ewe",
   }
 ]
+
+// --- 1. TEAM MEMBERS (Updated for LGI) ---
 export const team = [
   {
     cover: "./images/moses.webp",
     name: "Moses Akachukwu",
     work: "Director, Language Instructor & Program Coordinator",
     email: "moses.akachukwu@lgifoundation.org",
+    department: ["Instructors", "Leadership"]
   },
   {
     cover: "./images/ken.webp",
     name: "Kenneth Kamah",
     work: "Head of Languages Dept. & Program Coordinator",
-    email: "kamah.kenneth@lgifoundation.org",
+      email: "kamah.kenneth@lgifoundation.org",
+    department: ["Instructors", "Leadership"]
   },
   {
     cover: "./images/faith.webp",
     name: "Faith Adedolapo Olayiwola",
     work: "Head of Partnerships, Finance, Corporate Affairs & Program Coordinator",
     email: "olayiwola.faith@lgifoundation.org",
+    department: ["Outreach", "Leadership"]
   },
   {
     cover: "./images/bless.webp",
     name: "Blessing Ogunsanya",
     work: "Head of Programme & Human Resources",
     email: "ogunsanya.blessing@lgifoundation.org",
+    department: ["Outreach", "Leadership"]
   },
   {
     cover: "./images/sadiq.webp",
     name: "Sadiq Abubakar",
     work: "Head of Volunteers and Outreach",
     email: "sadiq.abubakar@lgifoundation.org",
+    department: "Outreach"
   },
   {
     cover: "./images/tboss.webp",
     name: "Omotosho Temitayo",
     work: "Project Officer (Social Media and Marketing) & Co-host",
     email: "omotosho.temitayo@lgifoundation.org",
+    department: "Outreach"
   },
   {
     cover: "./images/y.webp",
     name: "Yẹmí",
-    work: "IT Lead",
+    work: "Head of Media & IT Team Lead",
     email: "yemi@lgifoundation.org",
+    // We turned this into an array so it triggers under multiple tabs!
+    department: ["Operations", "Leadership"]
   },
   {
     cover: "./images/vic.webp",
     name: "Ojolowo Victoria I.",
     work: "French Language Instructor",
+    department: "Instructors"
   },
   {
     cover: "./images/esther.webp",
     name: "Olowoseunre Esther",
     work: "German Language Instructor",
+    department: "Instructors"
   },
   {
     cover: "./images/olaoniba.webp",
     name: "Olaoniba Esther Omotola",
     work: "German Language Instructor",
+    department: "Instructors"
   },
   {
     cover: "./images/alake.webp",
     name: "Alake Precious Abiola",
     work: "German Language Instructor",
+    department: "Instructors"
   },
   {
     cover: "https://placehold.co/200x200/000000/FFFFFF/png",
     name: "Blessing Essien",
     work: "Co-host, LGI Talks and Teach A Language Program",
+    department: "Outreach"
   },
   {
     cover: "https://placehold.co/200x200/000000/FFFFFF/png",
     name: "Library Department",
     work: "Information and Library",
     email: "info@lgifoundation.org",
+    department: "Operations"
   },
 ]
+
+// --- 2. FREQUENTLY ASKED QUESTIONS (Updated for LGI) ---
 export const faq = [
   {
     title: "How do I register for a course online?",

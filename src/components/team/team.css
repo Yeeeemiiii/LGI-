@@ -5,6 +5,43 @@
     margin-top: 100vh;
 }
 
+/* =========================================
+   DEPARTMENT SELECTOR TABS
+   ========================================= */
+.department-selector {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.department-selector .dept-tab {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #fff;
+    color: #555;
+    border: 2px solid #eee;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin: 0; 
+}
+
+.department-selector .dept-tab:hover {
+    border-color: rgba(27, 164, 21, 0.5); 
+    color: #1ba415;
+}
+
+.department-selector .dept-tab.active {
+    background-color: #1ba415; 
+    color: #fff;
+    border-color: #1ba415;
+    box-shadow: 0 5px 15px rgba(27, 164, 21, 0.3);
+}
+
 .team .item {
     transition: 0.5s;
 
