@@ -14,6 +14,7 @@ import Pricing from './components/pricing/Pricing';
 import Blog from './components/blog/Blog';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
+import Library from './components/library/Library'; // Import the Library component
 
 // Import the new pages you created
 //import StudentLogin from './components/StudentLogin'
@@ -28,7 +29,7 @@ const App = () => {
           {/* Main Pages */}
           <Route path='/' element={<Home />} />
           <Route path='/About' element={<About />} />
-          <Route path='/Library' element={<CourseHome />} />
+          <Route path='/Courses' element={<CourseHome />} />
           <Route path='/Languages' element={<Languages />} />
           <Route path='/Enroll' element={<Enroll />} />
           <Route path='/team' element={<Team />} />
@@ -36,6 +37,9 @@ const App = () => {
           <Route path='/community' element={<Blog />} />
           <Route path='/Contact' element={<Contact />} />
           <Route path='/placement-test' element={<PlacementTest />} />
+          {/* New Library Page */}
+          <Route path='/Library' element={<Library />} />
+          {/* You can add more routes for other pages here */}
           {/* <Route path='/about' element={<h1>About Us</h1>} /> */}
 
           {/* New Language School Pages */}

@@ -1,4 +1,3 @@
-
 export const aboutwrapper = [
   {
     cover: "https://img.icons8.com/external-yogi-aprelliyanto-basic-outline-yogi-aprelliyanto/80/ffffff/external-graduation-education-yogi-aprelliyanto-basic-outline-yogi-aprelliyanto.png",
@@ -22,9 +21,12 @@ export const aboutwrapper = [
     title: "COURSES",
   },
 ]
+
+// --- UPDATED: Added 'language' property to each course for the filter tabs ---
 export const coursesCard = [
   {
     id: 1,
+    language: "German",
     cover: "./images/book.png",
     coursesName: "A1 Online Group Course",
     courTeacher: [
@@ -39,6 +41,7 @@ export const coursesCard = [
   },
   {
     id: 2,
+    language: "German",
     cover: "./images/book.png",
     coursesName: "A1 Online Private Course",
     courTeacher: [
@@ -53,6 +56,7 @@ export const coursesCard = [
   },
   {
     id: 3,
+    language: "German",
     cover: "./images/class-copy.png",
     coursesName: "A2 Online Group Course",
     courTeacher: [
@@ -67,6 +71,7 @@ export const coursesCard = [
   },
   {
     id: 4,
+    language: "German",
     cover: "./images/class-copy.png",
     coursesName: "A2 Private Group Course",
     courTeacher: [
@@ -81,6 +86,7 @@ export const coursesCard = [
   },
   {
     id: 5,
+    language: "French",
     cover: "./images/class.png",
     coursesName: "B1 Online Group Course",
     courTeacher: [
@@ -95,6 +101,7 @@ export const coursesCard = [
   },
   {
     id: 6,
+    language: "French",
     cover: "./images/class.png",
     coursesName: "B1 Online Private Course",
     courTeacher: [
@@ -109,6 +116,7 @@ export const coursesCard = [
   },
   {
     id: 7,
+    language: "French",
     cover: "./images/lang.png",
     coursesName: "B2 Online Group Course",
     courTeacher: [
@@ -123,6 +131,7 @@ export const coursesCard = [
   },
   {
     id: 8,
+    language: "French",
     cover: "./images/lang.png",
     coursesName: "B2 Online Private Course",
     courTeacher: [
@@ -137,6 +146,7 @@ export const coursesCard = [
   },
   {
     id: 9,
+    language: "English",
     cover: "./images/langlearn.png",
     coursesName: "C1 Online Group Course",
     courTeacher: [
@@ -151,6 +161,7 @@ export const coursesCard = [
   },
   {
     id: 10,
+    language: "English",
     cover: "./images/langlearn.png",
     coursesName: "C1 Online Private Course",
     courTeacher: [
@@ -165,6 +176,7 @@ export const coursesCard = [
   },
   {
     id: 11,
+    language: "Spanish",
     cover: "./images/learning.png",
     coursesName: "C2 Online Group Course",
     courTeacher: [
@@ -179,6 +191,7 @@ export const coursesCard = [
   },
   {
     id: 12,
+    language: "Spanish",
     cover: "./images/learning.png",
     coursesName: "C2 Online Private Course",
     courTeacher: [
@@ -191,6 +204,66 @@ export const coursesCard = [
     priceAll: "NGN 400,000",
     pricePer: "Few places left",
   },
+  {
+    id: 13,
+    language: "Chinese",
+    cover: "./images/classg.png",
+    coursesName: "A1 Online Group Course",
+    courTeacher: [
+      {
+        dcover: "./images/LGIF.webp",
+        name: "Focus: Basic communication",
+        totalTime: "Online (Learning Platform & Meet)",
+      },
+    ],
+    priceAll: "NGN 150,000",
+    pricePer: "Few places left",
+  },
+  {
+    id: 14,
+    language: "Yoruba",
+    cover: "./images/langg.png",
+    coursesName: "Beginner Yoruba (Conversational)",
+    courTeacher: [
+      {
+        dcover: "./images/LGIF.webp",
+        name: "Focus: Speaking & Culture",
+        totalTime: "Online (Learning Platform & Meet)",
+      },
+    ],
+    priceAll: "NGN 100,000",
+    pricePer: "Few places left",
+  },
+  {
+    id: 15,
+    language: "Swahili",
+    cover: "./images/langlearng.png",
+    coursesName: "Beginner Swahili",
+    courTeacher: [
+      {
+        dcover: "./images/LGIF.webp",
+        name: "Focus: East African Communication",
+        totalTime: "Online (Learning Platform & Meet)",
+      },
+    ],
+    priceAll: "NGN 100,000",
+    pricePer: "Few places left",
+  },
+  {
+    id: 16,
+    language: "Ewe",
+    cover: "./images/bookg.png",
+    coursesName: "Beginner Ewe",
+    courTeacher: [
+      {
+        dcover: "./images/LGIF.webp",
+        name: "Focus: Speaking & Culture",
+        totalTime: "Online (Learning Platform & Meet)",
+      },
+    ],
+    priceAll: "NGN 100,000",
+    pricePer: "Few places left",
+  }
 ]
 
 export const online = [
@@ -672,4 +745,36 @@ export const quizQuestions = [
   { id: 18, q: "Grammatik (Verneinung): Ich habe _________ Brot. (Neutrum)", options: ["keine", "kein", "keinen", "keines"], answer: "kein" },
   { id: 19, q: "Grammatik (Verneinung): Wir möchten _________ Suppe. (Femininum)", options: ["keine", "kein", "keinen", "keinem"], answer: "keine" },
   { id: 20, q: "Übersetzung: 'The bill, please.'", options: ["Die Speisekarte, bitte.", "Die Rechnung, bitte.", "Das Wasser, bitte.", "Der Saft, bitte."], answer: "Die Rechnung, bitte." }
+];
+
+// --- LIBRARY / BOOKSTORE DATA ---
+export const libraryBooks = [
+  {
+    id: 1,
+    cover: "/images/book1.jpg", 
+    title: "Mastering A1 German Grammar",
+    author: "LGI Foundation",
+    price: "8,500 NGN"
+  },
+  {
+    id: 2,
+    cover: "/images/book2.jpg",
+    title: "French Vocabulary Builder",
+    author: "LGI Foundation",
+    price: "7,000 NGN"
+  },
+  {
+    id: 3,
+    cover: "/images/book3.jpg",
+    title: "Kolawole lernt Deutsch",
+    author: "LGI Foundation",
+    price: "12,000 NGN"
+  },
+  {
+    id: 4,
+    cover: "/images/book4.jpg",
+    title: "Spanish for Beginners",
+    author: "LGI Foundation",
+    price: "6,500 NGN"
+  }
 ];
