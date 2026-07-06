@@ -16,7 +16,11 @@ import Blog from './components/blog/Blog';
 import Community from './components/community/Community';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
-import Library from './components/library/Library'; // Import the Library component
+import Library from './components/library/Library';
+import Login from './components/auth/Login';
+import Dashboard from './components/dashboard/Dashboard';
+import AdminBlog from './components/admin/AdminBlog';
+import SingleBlog from './components/blog/SingleBlog'
 
 // Import the new pages you created
 //import StudentLogin from './components/StudentLogin'
@@ -38,11 +42,14 @@ const App = () => {
           <Route path='/resources' element={<Pricing />} />
           <Route path='/programs' element={<Programs />} />
           <Route path='/blog' element={<Blog />} />
+          <Route path='/blog/:id' element={<SingleBlog />} />
           <Route path='/community' element={<Community />} />
           <Route path='/Contact' element={<Contact />} />
           <Route path='/placement-test' element={<PlacementTest />} />
-          {/* New Library Page */}
           <Route path='/Library' element={<Library />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/admin-blog' element={<AdminBlog />} />
           {/* You can add more routes for other pages here */}
           {/* <Route path='/about' element={<h1>About Us</h1>} /> */}
 

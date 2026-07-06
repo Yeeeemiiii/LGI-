@@ -2,10 +2,16 @@ import React from 'react'
 import { useState } from 'react'
 import Head from './head'
 import './header.css'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 const Header = () => {
   const [click, setClick] = useState(false)
+  const location = useLocation()
+
+  if (location.pathname === '/login' || location.pathname === '/dashboard' || location.pathname === '/admin-blog') {
+    return null;
+  }
+
   return (
     <>
       <Head />
@@ -36,8 +42,9 @@ const Header = () => {
             </li>
             <li><Link to="/contact">Contact</Link></li>
           </ul>
-          <div className="start">
+          <div className="start"><Link to="/login" style={{ color: 'inherit', textDecoration: 'none', display: 'block', width: '100%' }}>
             <div className="button">GET CERTIFICATE</div>
+          </Link>
           </div>
           <button className='toggle' onClick={() => setClick(!click)}>
             {click ? <i className='fa fa-times'></i> : <i className='fa fa-bars'></i>}

@@ -1,0 +1,126 @@
+.login-page {
+  /* margin-top: 100vh; */
+  min-height: 100vh; /* ADDED: Forces the page to take up the full screen height */
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.login-card {
+  background: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  max-width: 450px;
+  width: 100%;
+  border-top: 5px solid rgba(70, 145, 71, 1);
+}
+
+.login-card h2 {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.login-card .subtitle {
+  color: #777;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.form-group input:focus {
+  border-color: rgba(70, 145, 71, 1);
+}
+
+.login-card .outline-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  background-color: #be3526;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.login-card .outline-btn:hover {
+  background-color: rgba(70, 145, 71, 1);
+}
+
+/* =========================================
+   TABLET OPTIMIZATION (iPad Pro - 1024x1366)
+   Max-width: 1024px
+   ========================================= */
+@media screen and (max-width: 1024px) {
+  .login-card { padding: 35px; }
+}
+
+/* =========================================
+   TABLET OPTIMIZATION (iPad Air - 820x1180)
+   Max-width: 820px
+   ========================================= */
+@media screen and (max-width: 820px) {
+  .login-card { padding: 35px 30px; }
+  .login-card h2 { font-size: 24px; }
+}
+
+/* =========================================
+   PHONE OPTIMIZATION (Standard Tablets/Large Phones)
+   Max-width: 768px
+   ========================================= */
+@media screen and (max-width: 768px) {
+  /* .login-page { margin-top: 60vh !important; } */
+  .login-card { padding: 30px 20px; }
+  .login-card h2 { font-size: 24px; }
+}
+
+/* =========================================
+   PHONE OPTIMIZATION (Google Pixel 7 - 412x915)
+   Max-width: 412px
+   ========================================= */
+@media screen and (max-width: 412px) {
+  .login-page { padding: 20px 15px; }
+  .login-card { padding: 25px 15px; }
+  .login-card h2 { font-size: 22px; margin-bottom: 8px; }
+  .login-card .subtitle { font-size: 13px; margin-bottom: 20px; }
+  
+  /* Shrink form elements slightly to save vertical space */
+  .form-group label { font-size: 13px; margin-bottom: 6px; }
+  .form-group input { padding: 10px 12px; font-size: 14px; }
+  .login-card .outline-btn { padding: 10px; font-size: 14px; }
+}
+
+/* =========================================
+   PHONE OPTIMIZATION (iPhone 12/13 Mini - 390x844)
+   Max-width: 390px
+   ========================================= */
+@media screen and (max-width: 390px) {
+  .login-card { padding: 20px 15px; }
+  .login-card h2 { font-size: 20px; }
+  .login-card .subtitle { font-size: 12px; }
+}
