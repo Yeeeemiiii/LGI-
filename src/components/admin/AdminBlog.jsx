@@ -10,55 +10,44 @@ const AdminBlog = () => {
   const [title, setTitle] = useState('')
   const [desc, setDesc] = useState('')
   const [type, setType] = useState('ADMIN')
-  
-  // New States for the Image Logic
+
   const [imageMode, setImageMode] = useState('link') // toggles between 'link' and 'upload'
   const [coverLink, setCoverLink] = useState('')
   const [imageFile, setImageFile] = useState(null)
-  
-  // Status States
+
   const [isPublishing, setIsPublishing] = useState(false)
   const [success, setSuccess] = useState(false)
 
   const handlePublish = async (e) => {
     e.preventDefault()
-    setIsPublishing(true) // Turn on loading state
+    setIsPublishing(true)
 
     try {
       let finalImageUrl = coverLink;
-
-      // STEP A: If they chose to upload a file, send it to Firebase Storage first!
       if (imageMode === 'upload' && imageFile) {
-        // Create a unique name for the file so it doesn't overwrite anything
         const imageRef = ref(storage, `blog-images/${Date.now()}_${imageFile.name}`);
-        
-        // Upload the file
+
         const snapshot = await uploadBytes(imageRef, imageFile);
-        
-        // Get the brand new live URL for that uploaded file
+
         finalImageUrl = await getDownloadURL(snapshot.ref);
       }
 
-      // STEP B: Create the blog post object using the final image URL
       const dateObj = new Date()
       const formattedDate = dateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
 
       const newBlogPost = {
         title: title,
         desc: desc,
-        cover: finalImageUrl, // This is either the pasted link OR the new Storage link
+        cover: finalImageUrl,
         type: type,
         date: formattedDate,
         com: "0 COMMENTS"
       }
 
-      // STEP C: Send the text data to the Firestore Database
       await addDoc(collection(db, "lgi-blog-posts"), newBlogPost);
 
       setSuccess(true)
       setIsPublishing(false)
-
-      // Wipe the form clean
       setTitle('')
       setDesc('')
       setCoverLink('')
@@ -100,7 +89,7 @@ const AdminBlog = () => {
             {/* --- NEW IMAGE TOGGLE SECTION --- */}
             <div className="form-group" style={{ background: '#f9f9f9', padding: '15px', borderRadius: '5px', border: '1px solid #eee' }}>
               <label style={{ marginBottom: '15px' }}>Cover Image Source</label>
-              
+
               <div style={{ display: 'flex', gap: '15px', marginBottom: '15px' }}>
                 <label style={{ fontWeight: 'normal', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '5px' }}>
                   <input type="radio" name="imageMode" checked={imageMode === 'link'} onChange={() => setImageMode('link')} />
@@ -112,7 +101,6 @@ const AdminBlog = () => {
                 </label>
               </div>
 
-              {/* Conditional Input: Shows either a text box OR a file uploader */}
               {imageMode === 'link' ? (
                 <input type="text" placeholder="Paste image link here" value={coverLink} onChange={(e) => setCoverLink(e.target.value)} required={imageMode === 'link'} />
               ) : (
@@ -133,7 +121,6 @@ const AdminBlog = () => {
               />
             </div>
 
-            {/* Button changes text while uploading! */}
             <button type="submit" className="outline-btn" style={{ background: isPublishing ? '#777' : '#1ba415' }} disabled={isPublishing}>
               {isPublishing ? 'PUBLISHING...' : 'PUBLISH POST'}
             </button>

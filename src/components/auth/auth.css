@@ -1,6 +1,6 @@
 .login-page {
   /* margin-top: 100vh; */
-  min-height: 100vh; /* ADDED: Forces the page to take up the full screen height */
+  min-height: 100vh;
   background-color: #f8f8f8;
   display: flex;
   justify-content: center;
@@ -94,7 +94,6 @@
    Max-width: 768px
    ========================================= */
 @media screen and (max-width: 768px) {
-  /* .login-page { margin-top: 60vh !important; } */
   .login-card { padding: 30px 20px; }
   .login-card h2 { font-size: 24px; }
 }
@@ -108,8 +107,7 @@
   .login-card { padding: 25px 15px; }
   .login-card h2 { font-size: 22px; margin-bottom: 8px; }
   .login-card .subtitle { font-size: 13px; margin-bottom: 20px; }
-  
-  /* Shrink form elements slightly to save vertical space */
+
   .form-group label { font-size: 13px; margin-bottom: 6px; }
   .form-group input { padding: 10px 12px; font-size: 14px; }
   .login-card .outline-btn { padding: 10px; font-size: 14px; }

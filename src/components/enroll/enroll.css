@@ -271,11 +271,9 @@
   .enroll-page {
     padding: 40px 15px;
   }
-  /* Collapse the 2-column input grid into 1 column */
   .select-grid {
     grid-template-columns: 1fr;
   }
-  /* Ensure the language grid doesn't get too cramped */
   .language-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -292,14 +290,12 @@
     text-align: center;
   }
 
-  /* Shrink the progress bar circles slightly */
   .step-indicator {
     width: 35px;
     height: 35px;
     font-size: 14px;
   }
 
-  /* Stack the navigation buttons so they don't squish side-by-side */
   .form-navigation {
     flex-direction: column-reverse;
     gap: 15px;
@@ -323,7 +319,6 @@
     font-size: 18px;
   }
 
-  /* Shrink the language cards to fit tiny screens */
   .lang-card {
     padding: 15px 5px;
   }
@@ -336,7 +331,6 @@
     font-size: 14px;
   }
   
-  /* Make the inputs slightly more compact */
   .input-group input, 
   .input-group select {
     padding: 12px;

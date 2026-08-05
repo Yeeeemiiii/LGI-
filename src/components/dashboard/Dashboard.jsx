@@ -5,7 +5,6 @@ import './dashboard.css'
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState('certificates')
 
-  // Simulated message tracking local state
   const [message, setMessage] = useState('')
   const [sentSuccess, setSentSuccess] = useState(false)
 
@@ -45,7 +44,7 @@ const Dashboard = () => {
               </button>
 
 
-              {/* NEW: Logout Button to escape the Dashboard */}
+              {/* Logout Button */}
               <button className="sidebar-btn" onClick={() => window.location.href = '/'} style={{ color: '#be3526', marginTop: '20px', borderTop: '1px solid #eee', borderRadius: '0', paddingTop: '20px' }}>
                 <i className="fa fa-sign-out-alt"></i> Logout
               </button>
@@ -55,7 +54,7 @@ const Dashboard = () => {
           {/* --- MAIN CONTENT WINDOW --- */}
           <div className="dashboard-content shadow">
 
-            {/* VIEW 1: CERTIFICATES */}
+            {/* CERTIFICATES */}
             {activeTab === 'certificates' && (
               <div>
                 <h2>Course Certificates</h2>
@@ -79,7 +78,7 @@ const Dashboard = () => {
               </div>
             )}
 
-            {/* VIEW 2: ASSIGNMENTS */}
+            {/* ASSIGNMENTS */}
             {activeTab === 'assignments' && (
               <div>
                 <h2>Assignment History</h2>
@@ -107,7 +106,7 @@ const Dashboard = () => {
               </div>
             )}
 
-            {/* VIEW 3: GRADES & FEEDBACK */}
+            {/* GRADES & FEEDBACK */}
             {activeTab === 'grades' && (
               <div>
                 <h2>Grades & Performance</h2>
@@ -135,7 +134,7 @@ const Dashboard = () => {
               </div>
             )}
 
-            {/* VIEW 4: MESSAGES */}
+            {/* MESSAGES */}
             {activeTab === 'messages' && (
               <div>
                 <h2>Contact Administrator</h2>

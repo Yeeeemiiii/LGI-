@@ -3,10 +3,10 @@ import { blog } from "../../dummydata"
 import "./footer.css"
 import { useLocation } from 'react-router-dom';
 
-const Footer = () => {// 2. Ask React Router what the current URL is
+const Footer = () => {
   const location = useLocation();
 
-  // 3. The Bouncer: Hide the footer on these specific pages
+  //Hide the footer on these specific pages
   if (location.pathname === '/login' || location.pathname === '/dashboard' || location.pathname === '/admin-blog') {
     return null; 
   }

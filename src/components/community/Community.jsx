@@ -9,7 +9,6 @@ const Community = () => {
 
   return (
     <>
-      {/* Set your desired background image here */}
       <Back title="LGI Community" cover="/images/streetlibrary.webp" />
       
       <section className="community-page padding">

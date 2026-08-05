@@ -7,11 +7,9 @@ import "./courses.css"
 const CourseHome = () => {
   return (
     <>
-      <Back title="Explore Courses" cover="/images/classes.webp"/>
+      <Back title="Explore Courses" cover="/images/classes.webp" />
       <CoursesCard />
       <OnlineCourses />
-
-      {/* UPDATED PLACEMENT TEST & SUPPORT SECTION */}
       <section className="placement-support padding">
         <div className="container">
 

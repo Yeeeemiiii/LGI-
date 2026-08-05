@@ -3,7 +3,6 @@ import {useNavigate} from 'react-router-dom'
 import Title from '../../common/title/Title'
 import OnlineCourses from '../../allcourses/OnlineCourses'
 
-// 1. Local data for the language programs
 const currentLanguages = [
     {
         language: "French",

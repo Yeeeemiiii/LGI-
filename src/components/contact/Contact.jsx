@@ -117,7 +117,6 @@ const Contact = () => {
           {/* Footer Note */}
           <div className='how-to-join'>
             <h3>
-              {/* Added the icon here with a small margin to space it from the text */}
               <i className="fa fa-info-circle" style={{ marginRight: "8px", color: "rgba(70, 145, 71, 1)" }}></i>
               HOW TO JOIN
             </h3>

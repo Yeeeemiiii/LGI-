@@ -6,7 +6,6 @@ import './programs.css'
 const Programs = () => {
   return (
     <>
-      {/* Set your desired background image here */}
       <Back title="Our Programs" cover="/images/prog.webp" />
       
       <section className="programs-page padding">

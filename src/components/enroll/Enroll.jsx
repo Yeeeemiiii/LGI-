@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // <-- 1. Imported the router hook
+import { useNavigate } from 'react-router-dom'; 
 import Back from '../common/back/Back';
 import './enroll.css';
 
@@ -31,7 +31,7 @@ const schedules = [
 ];
 
 const Enroll = () => {
-  const navigate = useNavigate(); // <-- 2. Initialized navigate
+  const navigate = useNavigate(); 
   const [step, setStep] = useState(1);
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
@@ -54,7 +54,6 @@ const Enroll = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // <-- 3. Updated logic: If they chose Placement Test, send them to the test page!
   const nextStep = () => {
     if (step === 1 && formData.level === 'Placement') {
       navigate('/placement-test'); // Redirect to placement test page
@@ -67,7 +66,6 @@ const Enroll = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would send formData to an API/Email service
     setSubmitted(true);
   };
 

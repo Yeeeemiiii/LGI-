@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Back from '../common/back/Back';
 import './placement.css';
-import { quizQuestions } from '../../dummydata'; // Importing quiz questions from a separate file
+import { quizQuestions } from '../../dummydata';
 
 const PlacementTest = () => {
   const navigate = useNavigate();
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState({});
-  const [timeLeft, setTimeLeft] = useState(20 * 60); // 20 minutes in seconds
+  const [timeLeft, setTimeLeft] = useState(20 * 60); 
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [score, setScore] = useState(0);
 
@@ -18,7 +18,7 @@ const PlacementTest = () => {
       const timerId = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
       return () => clearTimeout(timerId);
     } else if (timeLeft === 0 && !isSubmitted) {
-      handleSubmit(); // Auto-submit when time runs out
+      handleSubmit(); 
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [timeLeft, isSubmitted]);

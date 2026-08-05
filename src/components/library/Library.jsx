@@ -32,7 +32,6 @@ const Library = () => {
                   <div className="price">
                     <h3>{book.price}</h3>
                   </div>
-                  {/* Later, you can link this to a checkout page or WhatsApp! */}
                   <button className="outline-btn">ADD TO CART <i className="fa fa-shopping-cart"></i></button>
                 </div>
               </div>

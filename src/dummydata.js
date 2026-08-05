@@ -22,7 +22,6 @@ export const aboutwrapper = [
   },
 ]
 
-// --- UPDATED: Added 'language' property to each course for the filter tabs ---
 export const coursesCard = [
   {
     id: 1,
@@ -299,7 +298,6 @@ export const online = [
   }
 ]
 
-// --- 1. TEAM MEMBERS (Updated for LGI) ---
 export const team = [
   {
     cover: "./images/moses.webp",
@@ -348,7 +346,6 @@ export const team = [
     name: "Yẹmí",
     work: "Head of Media & IT Team Lead",
     email: "yemi@lgifoundation.org",
-    // We turned this into an array so it triggers under multiple tabs!
     department: ["Operations", "Leadership"]
   },
   {
@@ -390,7 +387,7 @@ export const team = [
   },
 ]
 
-// --- 2. FREQUENTLY ASKED QUESTIONS (Updated for LGI) ---
+// --- 2. FREQUENTLY ASKED QUESTIONS ---
 export const faq = [
   {
     title: "How do I register for a course online?",
@@ -580,7 +577,7 @@ export const resourceContact = [
   }
 ]
 
-// --- 1. WHAT WE DO (Updated for LGI) ---
+// --- 1. WHAT WE DO ---
 export const homeAbout = [
   {
     id: 1,
@@ -608,7 +605,7 @@ export const homeAbout = [
   },
 ];
 
-// --- 2. LANGUAGE CORNER QUICK LINKS (New!) ---
+// --- 2. LANGUAGE CORNER QUICK LINKS  ---
 export const languageQuickLinks = [
   {
     cover: "https://img.icons8.com/ios/80/rgba(70,145,71,0.6)/search--v1.png",
@@ -632,7 +629,7 @@ export const languageQuickLinks = [
   },
 ];
 
-// --- 3. OUR LANGUAGE PROGRAMS (New!) ---
+// --- 3. OUR LANGUAGE PROGRAMS ---
 export const languagePrograms = [
   {
     title: "Language Immersion Program",

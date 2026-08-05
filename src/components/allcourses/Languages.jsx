@@ -9,10 +9,9 @@ const Languages = () => {
     const navigate = useNavigate();
   return (
     <div className="languages-page">
-      {/* 1. The Header Background */}
       <Back title="Explore Courses" cover="/images/streetlibrary.webp"/>
       
-      {/* 2. The NEW Placement Test Section */}
+      {/* 2. The Placement Test Section */}
       <section className="placement-support padding">
         <div className="container">
           <div className="placement-box shadow" style={{ backgroundColor: '#fff', padding: '40px', borderRadius: '8px', borderTop: '4px solid #1ba415' }}>

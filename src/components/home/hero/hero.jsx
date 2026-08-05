@@ -1,10 +1,10 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom' // <-- 1. Import the useNavigate hook
+import { useNavigate } from 'react-router-dom' 
 import "./hero.css"
 import Title from '../../common/title/Title'
 
 const Hero = () => {
-  const navigate = useNavigate(); // <-- 2. Initialize the hook inside your component
+  const navigate = useNavigate();
 
   return (
     <>
@@ -19,7 +19,6 @@ const Hero = () => {
                             ENROLL NOW <i className='fa fa-long-arrow-alt-right'></i>
                         </button>
                         
-                        {/* 3. Add an onClick event that tells the router where to go */}
                         <button className='primary-btn' onClick={() => navigate('/courses')}>
                             VIEW COURSES <i className='fa fa-long-arrow-alt-right'></i>
                         </button>

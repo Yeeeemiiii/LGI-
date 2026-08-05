@@ -1,6 +1,4 @@
-/* --- PROGRAMS PAGE STYLES --- */
 .programs-page {
-  /* Aligns with your 100vh desktop / 60vh mobile layout */
   margin-top: 100vh;
   background-color: #f8f8f8;
 }
@@ -17,7 +15,6 @@
   padding: 40px;
   border-radius: 8px;
   border-top: 5px solid rgba(70, 145, 71, 1);
-  /* LGI Green Accent */
   transition: 0.3s ease;
 }
 
@@ -27,9 +24,6 @@
   border-top-color: #be3526;
 }
 
-/* =========================================
-   FIX: PERFECTLY CENTERED ICON SHADE
-   ========================================= */
 .program-card .icon {
   display: inline-flex;
   align-items: center;
@@ -56,7 +50,6 @@
 .program-card h2 {
   font-size: 24px;
   color: #be3526;
-  /* LGI Red */
   margin-bottom: 20px;
 }
 
@@ -121,7 +114,6 @@
     margin-top: 60vh !important;
   }
 
-  /* Follows the Goldilocks rule */
   .programs-grid {
     grid-template-columns: 1fr;
   }
@@ -154,7 +146,6 @@
     margin-bottom: 12px;
   }
 
-  /* Shrinks the icon bubble slightly to save vertical space */
   .program-card .icon {
     width: 60px;
     height: 60px;

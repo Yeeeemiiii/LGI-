@@ -22,9 +22,6 @@ import Dashboard from './components/dashboard/Dashboard';
 import AdminBlog from './components/admin/AdminBlog';
 import SingleBlog from './components/blog/SingleBlog'
 
-// Import the new pages you created
-//import StudentLogin from './components/StudentLogin'
-//import StudentDashboard from './components/StudentDashboard'
 
 const App = () => {
   return (

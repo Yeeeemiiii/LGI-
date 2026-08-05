@@ -26,7 +26,7 @@
   bottom: 0;
   left: 60px;
   color: rgba(70, 145, 71, 0.6);
-  background-color: transparent; /* Ensures there is no background color */
+  background-color: transparent; 
   width: 30px;
   height: 30px;
   line-height: 30px;
@@ -83,7 +83,6 @@
     box-sizing: border-box;
   }
 
-  /* Force 2 columns and prevent grid blowout */
   .testimonal .grid2 {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -92,7 +91,6 @@
     box-sizing: border-box;
   }
 
-  /* Keep inner cards locked down */
   .testimonal .items {
     min-width: 0;
     padding: 25px;
@@ -100,7 +98,6 @@
     overflow-wrap: break-word;
   }
 
-  /* Give the avatar wrapper a fixed size so it doesn't squish */
   .testimonal .img {
     width: 80px;
     height: 80px;
@@ -126,7 +123,6 @@
    Max-width: 768px
    ========================================= */
 @media screen and (max-width: 768px) {
-  /* Drop to 1 column for standard mobile */
   .testimonal .grid2 {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -148,7 +144,6 @@
     padding: 20px 15px;
   }
 
-  /* Stack the avatar above the name for narrow screens */
   .testimonal .box {
     flex-direction: column;
     text-align: center;

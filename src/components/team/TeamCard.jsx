@@ -2,10 +2,8 @@ import React, { useState } from 'react'
 import { team } from '../../dummydata'
 
 const TeamCard = () => {
-    // 1. State to track the active department tab
     const [selectedDept, setSelectedDept] = useState('Leadership');
 
-    // 2. Define the department tabs available
     const departments = [
         { id: 'Leadership', label: 'Leadership' },
         { id: 'Instructors', label: 'Instructors' },
@@ -14,11 +12,9 @@ const TeamCard = () => {
         { id: 'All', label: 'View All' }
     ];
 
-    // 3. Filter the team array based on the selected tab
     const filteredTeam = selectedDept === 'All' 
         ? team 
         : team.filter(member => 
-            // This checks if the department is a list (like yours) or a single word (like the others)
             Array.isArray(member.department) 
                 ? member.department.includes(selectedDept) 
                 : member.department === selectedDept
@@ -40,7 +36,6 @@ const TeamCard = () => {
             </div>
 
             {/* --- FILTERED TEAM GRID --- */}
-            {/* The 'grid' class is moved here to only wrap the cards */}
             <div className="grid">
                 {filteredTeam.length > 0 ? (
                     filteredTeam.map((val, index) => (

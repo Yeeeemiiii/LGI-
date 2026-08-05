@@ -3,7 +3,6 @@ import Back from "../common/back/Back"
 import "./price.css"
 import Faq from "./Faq"
 import ResourcesCard from "./ResourcesCard"
-// Import the new lgiTalks array from your dummy data
 import { lgiTalks } from "../../dummydata" 
 
 const Pricing = () => {
@@ -11,7 +10,7 @@ const Pricing = () => {
     <>
       <Back title='Resources' cover="/images/podcast.webp"/>
 
-      {/* --- NEW SECTION: LGI TALKS --- */}
+      {/* --- LGI TALKS --- */}
       <section className='lgi-talks padding' style={{ backgroundColor: '#f8f8f8' }}>
         <div className='container'>
           
@@ -66,10 +65,10 @@ const Pricing = () => {
         </div>
       </section>
 
-      {/* --- ORIGINAL RESOURCES CONTENT --- */}
+      {/* --- RESOURCES CONTENT --- */}
       { <ResourcesCard /> }
 
-      {/* --- ORIGINAL FAQ SECTION --- */}
+      {/* --- FAQ SECTION --- */}
       <Faq />
     </>
   )

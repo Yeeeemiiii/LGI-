@@ -10,7 +10,7 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault()
-    // For now, let's simulate a login match and send them to the student dashboard
+    //simulate a login match and send to the student dashboard
     if (email && password) {
       navigate('/dashboard')
     }
@@ -22,7 +22,7 @@ const Login = () => {
       <section className="login-page padding">
         <div className="login-card shadow">
 
-          {/* NEW: Back to Home link so users aren't trapped */}
+          {/* NEW: Back to Home link*/}
           <div style={{ textAlign: 'center', marginBottom: '20px' }}>
             <Link to="/" style={{ color: '#be3526', textDecoration: 'none', fontWeight: '600', fontSize: '14px' }}>
               <i className="fa fa-arrow-left"></i> Back to Website

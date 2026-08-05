@@ -1,7 +1,6 @@
 import React from 'react'
 import Title from '../common/title/Title'
 import { resourceHosts, resourceOffers, resourceContact } from '../../dummydata'
-// Make sure this path points correctly to your about.css file!
 import "../about/about.css" 
 
 const ResourcesCard = ({ marginClass }) => {
@@ -12,7 +11,6 @@ const ResourcesCard = ({ marginClass }) => {
                 <div className="container flexSB">
                     <div className="left row">
                         <div className="image-container">
-                            {/* Change this src to a real image of the hosts or talks! */}
                             <img src="/images/about.webp" alt="LGI Talks" />
                             <div className="gradient-overlay"></div>
                         </div>
@@ -21,7 +19,6 @@ const ResourcesCard = ({ marginClass }) => {
                         <Title subtitle="OUR PROGRAMS" title="Teach A Language & LGI Talks" />
                         <div className="items">
                             {resourceHosts.map((val, index) => (
-                                /* FIX: Changed flexSB to flex and added gap/alignment styles */
                                 <div className="item flex" key={index} style={{ alignItems: 'flex-start', gap: '20px' }}> 
                                     <div className="img" style={{ flexShrink: 0 }}>
                                         <img src={val.cover} alt="" />
@@ -44,7 +41,6 @@ const ResourcesCard = ({ marginClass }) => {
                         <Title subtitle="MORE OPPORTUNITIES" title="Additional Offers" />
                         <div className="items">
                             {resourceOffers.map((val, index) => (
-                                /* FIX: Applied the exact same alignment fix here */
                                 <div className="item flex" key={index} style={{ alignItems: 'flex-start', gap: '20px' }}> 
                                     <div className="img" style={{ flexShrink: 0 }}>
                                         <img src={val.cover} alt="" />
@@ -59,7 +55,6 @@ const ResourcesCard = ({ marginClass }) => {
                     </div> 
                     <div className="left row">
                         <div className="image-container">
-                            {/* Change this src to an image representing learning/offers! */}
                             <img src="/images/about.webp" alt="Additional Offers" />
                             <div className="gradient-overlay"></div>
                         </div>

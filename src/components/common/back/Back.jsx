@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom'
 const Back = ({ title, cover }) => {
     const location = useLocation()
     
-    // Set a default image just in case a page forgets to pass a cover!
+    // default image just in case a page forgets to pass a cover
     const bgImage = cover || "/images/back.webp"
 
     return (

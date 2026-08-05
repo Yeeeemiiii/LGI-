@@ -1,4 +1,3 @@
-/* --- DESKTOP GLOBAL STYLES --- */
 .head {
     padding: 20px 0;
     color: #fff;
@@ -16,7 +15,6 @@
     margin-left: 10px;
 }
 
-/* --- DESKTOP NAVIGATION --- */
 header {
     background-color: rgba(255, 255, 255, 0.2);
     margin: 0 30px;
@@ -44,7 +42,6 @@ header ul li a:hover {
     color: #be3526;
 }
 
-/* --- DESKTOP DROPDOWN MENU --- */
 .dropdown {
     position: relative;
 }
@@ -64,19 +61,16 @@ header ul li a:hover {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     
-    /* Hide it by default, slide up slightly */
     opacity: 0;
     visibility: hidden;
     transform: translateY(15px);
     transition: all 0.3s ease;
     
-    /* Overrides the flexbox spacing of the main nav */
     padding: 10px 0 !important;
     display: block !important; 
     z-index: 100;
 }
 
-/* Show dropdown smoothly on hover */
 .dropdown:hover .dropdown-menu {
     opacity: 1;
     visibility: visible;
@@ -89,20 +83,20 @@ header ul li a:hover {
     padding: 0 !important;
 }
 
-/* Individual dropdown links */
+
 .dropdown-menu li a {
-    color: #333 !important; /* Dark text for readability on the white background */
+    color: #333 !important; 
     display: block;
     padding: 12px 20px !important;
     font-weight: 600 !important;
     transition: 0.3s;
 }
 
-/* Hover effect on dropdown links */
+
 .dropdown-menu li a:hover {
-    background-color: rgba(70, 145, 71, 0.08); /* Subtle green highlight */
-    color: #be3526 !important;                 /* LGI Red */
-    padding-left: 25px !important;             /* Slick right-slide effect */
+    background-color: rgba(70, 145, 71, 0.08);
+    color: #be3526 !important;           
+    padding-left: 25px !important;           
 }
 
 /* --- DESKTOP BUTTON ("Get Certificate") --- */
@@ -143,7 +137,6 @@ header ul li a:hover {
         overflow: visible !important; 
     }
 
-    /* Force the nav container to stretch */
     header nav {
         display: flex !important;
         width: 100% !important;
@@ -151,7 +144,6 @@ header ul li a:hover {
         align-items: stretch !important;
     }
 
-    /* flex: 1 forces the links to spread evenly across all remaining space */
     header ul.flexSB {
         display: flex !important; 
         flex: 1 !important; 
@@ -206,12 +198,12 @@ header ul li a:hover {
     }
     
     header ul li a {
-        font-size: 11px !important; /* Shrunk for tighter screen */
+        font-size: 11px !important;
     }
     
     .start {
         padding: 0 15px !important; 
-        font-size: 11px !important; /* Matches link font */
+        font-size: 11px !important; 
     }
 }
 
@@ -265,11 +257,10 @@ header ul li a:hover {
         overflow: visible !important; 
     }
 
-    /* Resets the nav container for mobile stack and anchors the toggle button */
     header nav {
         display: block !important;
         width: 100% !important;
-        position: relative; /* REQUIRED for the toggle button to center correctly */
+        position: relative; 
     }
 
     .head .social {
@@ -288,7 +279,6 @@ header ul li a:hover {
         margin: 0 !important; 
     }
 
-    /* --- THE TOGGLE FIX --- */
     .toggle {
         display: block !important;
         background: none;
@@ -297,11 +287,10 @@ header ul li a:hover {
         position: absolute;
         right: 15px;
         
-        /* THIS replaces top: -30px. It forces the icon to the exact center of the green bar */
         top: 50%;
         transform: translateY(-50%);
         margin: 0;
-        padding: 5px; /* Added slight padding for a larger touch target */
+        padding: 5px;
         
         z-index: 1000;
         cursor: pointer;
@@ -345,11 +334,11 @@ header ul li a:hover {
 
     /* --- MOBILE DROPDOWN STYLES --- */
     .mobile-nav .dropdown-menu {
-        position: relative; /* Removes absolute floating */
+        position: relative; 
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
-        background-color: rgba(0, 0, 0, 0.15); /* Darkens the menu slightly to separate it from parent nav */
+        background-color: rgba(0, 0, 0, 0.15); 
         box-shadow: none;
         width: 100%;
         margin-top: 15px;
@@ -364,7 +353,7 @@ header ul li a:hover {
 
     .mobile-nav .dropdown-menu li a {
         color: #fff !important;
-        padding: 15px 40px !important; /* Indents the text so it clearly looks like a sub-menu */
+        padding: 15px 40px !important; 
     }
     
     .mobile-nav .dropdown-menu li a:hover {
@@ -379,14 +368,14 @@ header ul li a:hover {
    ========================================= */
 @media screen and (max-width: 412px) {
     .logo h1 {
-        font-size: 18px; /* Slightly shrinks the title so it doesn't wrap awkwardly */
+        font-size: 18px; 
     }
     .start {
         font-size: 15px !important;
         padding: 12px 0 !important;
     }
     .toggle {
-        font-size: 26px; /* Scales hamburger down to match the button */
+        font-size: 26px; 
     }
 }
 
@@ -404,6 +393,6 @@ header ul li a:hover {
     }
     .toggle {
         font-size: 24px;
-        right: 10px; /* Snugs it closer to the edge on tiny screens */
+        right: 10px; 
     }
 }

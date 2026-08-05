@@ -2,7 +2,7 @@
   padding: 80px 20px;
   background-color: #f8f8f8;
   min-height: 100vh;
-  margin-top: 100vh; /* Keeps the full-screen header reveal */
+  margin-top: 100vh;
 }
 
 .placement-container {
@@ -12,7 +12,7 @@
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  border-top: 5px solid #be3526; /* LGI Red for testing focus */
+  border-top: 5px solid #be3526;
   position: relative;
 }
 
@@ -99,7 +99,6 @@
   gap: 30px;
 }
 
-/* Triggers a 50/50 split on Desktop ONLY if a passage is present */
 @media screen and (min-width: 900px) {
   .test-layout.has-passage {
     grid-template-columns: 1fr 1fr;
@@ -109,11 +108,11 @@
 .passage-section {
   background-color: #fcfcfc;
   border: 1px solid #eee;
-  border-left: 4px solid rgba(70, 145, 71, 1); /* LGI Green border */
+  border-left: 4px solid rgba(70, 145, 71, 1); 
   padding: 25px;
   border-radius: 8px;
   max-height: 450px;
-  overflow-y: auto; /* Allows scrolling if the story is long! */
+  overflow-y: auto; 
 }
 
 .passage-section h3 {
@@ -128,7 +127,7 @@
   font-size: 16px;
   line-height: 1.8;
   color: #444;
-  white-space: pre-line; /* MAGIC: This forces CSS to respect the \n line breaks in your text! */
+  white-space: pre-line;
 }
 
 /* --- NAVIGATION --- */

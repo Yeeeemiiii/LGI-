@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { db } from '../../firebase'
 import { doc, getDoc, collection, addDoc, onSnapshot, query, orderBy } from 'firebase/firestore'
-// 1. Import your static data
+
 import { blog as fallbackData } from '../../dummydata'
 import './blog.css'
 
@@ -14,16 +14,12 @@ const SingleBlog = () => {
   const [commentText, setCommentText] = useState('')
 
   useEffect(() => {
-    // 2. The Smart Fetch: Checks static data first, then Firebase
     const fetchPost = async () => {
-      // Look for the ID in dummydata (Convert to string because URL IDs are always strings)
       const staticPost = fallbackData.find((p) => p.id.toString() === id);
 
       if (staticPost) {
-        // If it's a static post, load it immediately!
         setPost(staticPost);
       } else {
-        // If it's not a static post, it must be a live Firebase post
         const docRef = doc(db, "lgi-blog-posts", id)
         const docSnap = await getDoc(docRef)
         if (docSnap.exists()) {
@@ -33,7 +29,6 @@ const SingleBlog = () => {
     }
     fetchPost()
 
-    // 3. Live Comment Listener (Works for BOTH static and live posts!)
     const q = query(collection(db, `lgi-blog-posts/${id}/comments`), orderBy("timestamp", "desc"))
     const unsubscribe = onSnapshot(q, (snapshot) => {
       setComments(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })))
@@ -79,7 +74,6 @@ const SingleBlog = () => {
 
         {/* --- COMMENTS SECTION --- */}
         <div className="comments-section" style={{ borderTop: '2px solid #f0f0f0', paddingTop: '40px' }}>
-          {/* Note: Dummy data has a fake 'com' string, but this shows the REAL live comment count */}
           <h3>Join the Conversation ({comments.length})</h3>
           
           <form onSubmit={submitComment} style={{ marginTop: '20px', marginBottom: '40px' }}>
