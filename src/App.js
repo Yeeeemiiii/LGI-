@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from './components/common/heading/Header'
 import "./App.css"
 import "./components/common/heading/header.css"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Home from './components/home/Home';
 import About from './components/about/About';
 import CourseHome from './components/allcourses/CourseHome';
@@ -25,10 +25,20 @@ import Feedback from './components/feedback/Feedback'
 import CookieConsent from './components/common/cookie/CookieConsent'
 
 
+// Scrolls to the top of the page whenever the route changes
+const ScrollToTop = () => {
+  const { pathname } = useLocation()
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+  return null
+}
+
 const App = () => {
   return (
     <>
       <Router>
+        <ScrollToTop />
         <Header />
         <Routes>
           {/* Main Pages */}
