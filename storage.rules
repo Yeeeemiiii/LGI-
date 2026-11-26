@@ -1,0 +1,27 @@
+rules_version = '2';
+
+// LGI website (project: lgi-foundation) - locked-down Storage rules.
+// The only path the code uses is blog-images/ (AdminBlog.jsx uploads, visitors view).
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    // TODO before publishing: put the blog admin's sign-in email address here.
+    function isAdmin() {
+      return request.auth != null
+        && request.auth.token.email in ['REPLACE_WITH_BLOG_ADMIN_EMAIL'];
+    }
+
+    match /blog-images/{fileName} {
+      allow read: if true;
+      allow create, update: if isAdmin()
+        && request.resource.size < 5 * 1024 * 1024
+        && request.resource.contentType.matches('image/.*');
+      allow delete: if isAdmin();
+    }
+
+    // Default: deny everything else.
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

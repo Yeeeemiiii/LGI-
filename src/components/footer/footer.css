@@ -95,6 +95,12 @@ footer ul li:hover {
   cursor: pointer;
 }
 
+footer .link li a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+
 footer .items {
   margin-bottom: 20px;
 }

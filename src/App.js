@@ -21,6 +21,7 @@ import Login from './components/auth/Login';
 import Dashboard from './components/dashboard/Dashboard';
 import AdminBlog from './components/admin/AdminBlog';
 import SingleBlog from './components/blog/SingleBlog'
+import Feedback from './components/feedback/Feedback'
 import CookieConsent from './components/common/cookie/CookieConsent'
 
 
@@ -45,6 +46,7 @@ const App = () => {
           <Route path='/Contact' element={<Contact />} />
           <Route path='/placement-test' element={<PlacementTest />} />
           <Route path='/Library' element={<Library />} />
+          <Route path='/feedback' element={<Feedback />} />
           <Route path='/login' element={<Login />} />
           <Route path='/dashboard' element={<Dashboard />} />
           <Route path='/admin-blog' element={<AdminBlog />} />

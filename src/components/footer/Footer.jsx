@@ -1,7 +1,7 @@
 import React from "react"
 import { blog } from "../../dummydata"
 import "./footer.css"
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Footer = () => {
   const location = useLocation();
@@ -42,21 +42,21 @@ const Footer = () => {
           <div className='box link'>
             <h3>Explore</h3>
             <ul>
-              <li>About Us</li>
-              <li>Courses</li>
-              <li>Team</li>
-              <li>Blog</li>
-              <li>Contact Us</li>
+              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/courses">Courses</Link></li>
+              <li><Link to="/team">Team</Link></li>
+              <li><Link to="/blog">Blog</Link></li>
+              <li><Link to="/contact">Contact Us</Link></li>
             </ul>
           </div>
           <div className='box link'>
             <h3>Quick Links</h3>
             <ul>
-              <li>Placement Test</li>
-              <li>Pricing</li>
+              <li><Link to="/placement-test">Placement Test</Link></li>
+              <li><Link to="/resources">Pricing</Link></li>
               <li>Terms & Conditions</li>
               <li>Privacy Policy</li>
-              <li>Feedback</li>
+              <li><Link to="/feedback">Feedback</Link></li>
             </ul>
           </div>
           <div className='box'>

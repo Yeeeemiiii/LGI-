@@ -1,0 +1,121 @@
+.feedback-card {
+  max-width: 720px;
+  padding: 40px;
+}
+
+.feedback-card h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.feedback-intro {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.feedback form input,
+.feedback form textarea,
+.feedback form select {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  outline: none;
+  background: #fff;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+.feedback form input:focus,
+.feedback form textarea:focus,
+.feedback form select:focus {
+  border-color: rgba(70, 145, 71, 0.8);
+}
+
+.feedback-row {
+  display: flex;
+  gap: 10px;
+}
+
+.feedback-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.feedback-stars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+.feedback-stars .star {
+  background: none;
+  border: none;
+  padding: 0 2px;
+  font-size: 34px;
+  line-height: 1;
+  color: #d0d0d0;
+  cursor: pointer;
+  transition: color 0.15s, transform 0.15s;
+}
+
+.feedback-stars .star.on {
+  color: #f2b01e;
+}
+
+.feedback-stars .star:hover {
+  transform: scale(1.12);
+}
+
+.feedback-count {
+  text-align: right;
+  font-size: 12px;
+  color: #999;
+  margin: -14px 0 18px;
+}
+
+.feedback-hp {
+  position: absolute !important;
+  left: -9999px;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0;
+}
+
+.feedback-error {
+  color: #be3526;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.feedback .primary-btn {
+  width: auto;
+  margin-top: 0;
+}
+
+.feedback .primary-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.feedback-thanks {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.feedback-thanks p {
+  margin: 10px 0 25px;
+  color: #666;
+}
+
+@media screen and (max-width: 600px) {
+  .feedback-card {
+    padding: 25px 20px;
+  }
+  .feedback-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
