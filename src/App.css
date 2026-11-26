@@ -11,6 +11,13 @@ body {
   background-color: #f8f8f8;
 }
 
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
 .container {
   max-width: 85%;
   margin: auto;
