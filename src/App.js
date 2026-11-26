@@ -21,6 +21,7 @@ import Login from './components/auth/Login';
 import Dashboard from './components/dashboard/Dashboard';
 import AdminBlog from './components/admin/AdminBlog';
 import SingleBlog from './components/blog/SingleBlog'
+import CookieConsent from './components/common/cookie/CookieConsent'
 
 
 const App = () => {
@@ -56,6 +57,7 @@ const App = () => {
           {/* <Route path='/dashboard' element={<StudentDashboard />} /> */}
         </Routes>
         <Footer />
+        <CookieConsent />
       </Router>
     </>
   )
