@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import Back from '../common/back/Back';
 import './enroll.css';
+import { submitNetlifyForm } from '../../netlifyForm';
+import { trackEvent } from '../../analytics';
 
 const languages = [
   { id: 'French', flag: '🇫🇷', native: 'Français' },
@@ -34,6 +36,7 @@ const Enroll = () => {
   const navigate = useNavigate(); 
   const [step, setStep] = useState(1);
   const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState('idle');
   const [formData, setFormData] = useState({
     language: '',
     level: '',
@@ -58,15 +61,30 @@ const Enroll = () => {
     if (step === 1 && formData.level === 'Placement') {
       navigate('/placement-test'); // Redirect to placement test page
     } else {
+      trackEvent('enroll_step', { step: step + 1 });
       setStep(step + 1);
     }
   };
 
   const prevStep = () => setStep(step - 1);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    if (status === 'sending') return;
+    setStatus('sending');
+    try {
+      await submitNetlifyForm('enrolment', formData);
+      trackEvent('enroll_submit', {
+        language: formData.language,
+        level: formData.level,
+        schedule: formData.schedule,
+      });
+      setSubmitted(true);
+      setStatus('idle');
+    } catch (err) {
+      console.error('Enrolment submit failed:', err);
+      setStatus('error');
+    }
   };
 
   return (
@@ -188,10 +206,16 @@ const Enroll = () => {
                     </div>
                   </div>
 
+                  {status === 'error' && (
+                    <p role="alert" style={{ color: '#be3526', marginTop: '10px' }}>
+                      Sorry, we could not send your application. Please try again, or email info@lgifoundation.org.
+                    </p>
+                  )}
+
                   <div className="form-navigation">
                     <button className="btn-back" onClick={prevStep}>Back</button>
-                    <button className="btn-next" onClick={handleSubmit} disabled={!formData.firstName || !formData.lastName || !formData.email || !formData.phone || !formData.dob}>
-                      Submit Application <i className="fa fa-paper-plane"></i>
+                    <button className="btn-next" onClick={handleSubmit} disabled={!formData.firstName || !formData.lastName || !formData.email || !formData.phone || !formData.dob || status === 'sending'}>
+                      {status === 'sending' ? 'Sending...' : 'Submit Application'} <i className="fa fa-paper-plane"></i>
                     </button>
                   </div>
                 </div>

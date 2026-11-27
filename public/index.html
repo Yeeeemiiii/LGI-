@@ -66,6 +66,27 @@
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
+
+  <!-- Hidden copies of the site's forms so Netlify Forms detects them at build time.
+       The real forms are in src/components/enroll/Enroll.jsx and contact/Contact.jsx.
+       Field names must match. -->
+  <form name="enrolment" data-netlify="true" hidden>
+    <input name="language" />
+    <input name="level" />
+    <input name="schedule" />
+    <input name="firstName" />
+    <input name="lastName" />
+    <input name="email" />
+    <input name="phone" />
+    <input name="dob" />
+    <input name="referral" />
+  </form>
+  <form name="contact" data-netlify="true" hidden>
+    <input name="name" />
+    <input name="email" />
+    <input name="subject" />
+    <textarea name="message"></textarea>
+  </form>
   <div id="root"></div>
 </body>
 

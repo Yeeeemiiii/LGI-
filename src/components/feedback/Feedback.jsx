@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { collection, addDoc, serverTimestamp } from "firebase/firestore"
+import { trackEvent } from "../../analytics"
 import { db } from "../../firebase"
 import Back from "../common/back/Back"
 import "./feedback.css"
@@ -47,6 +48,7 @@ const Feedback = () => {
         createdAt: serverTimestamp(),
       })
       setStatus("sent")
+      trackEvent("feedback_submit", { category: form.category, rating })
     } catch (err) {
       console.error("Feedback submit failed:", err)
       setStatus("error")

@@ -5,10 +5,9 @@ rules_version = '2';
 service firebase.storage {
   match /b/{bucket}/o {
 
-    // TODO before publishing: put the blog admin's sign-in email address here.
     function isAdmin() {
       return request.auth != null
-        && request.auth.token.email in ['REPLACE_WITH_BLOG_ADMIN_EMAIL'];
+        && request.auth.token.email in ['langlopact@gmail.com'];
     }
 
     match /blog-images/{fileName} {

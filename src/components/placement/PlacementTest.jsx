@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Back from '../common/back/Back';
 import './placement.css';
 import { quizQuestions } from '../../dummydata';
+import { trackEvent } from '../../analytics';
 
 const PlacementTest = () => {
   const navigate = useNavigate();
@@ -55,6 +56,7 @@ const PlacementTest = () => {
     });
     setScore(finalScore);
     setIsSubmitted(true);
+    trackEvent('placement_test_complete', { score: finalScore, total: quizQuestions.length });
   };
 
   return (

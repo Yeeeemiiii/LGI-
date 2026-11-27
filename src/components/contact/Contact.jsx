@@ -1,8 +1,27 @@
-import React from "react"
+import React, { useState } from "react"
 import Back from "../common/back/Back"
 import "./contact.css"
+import { submitNetlifyForm } from "../../netlifyForm"
+import { trackEvent } from "../../analytics"
 
 const Contact = () => {
+  const [status, setStatus] = useState('idle')
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const form = e.target
+    setStatus('sending')
+    try {
+      await submitNetlifyForm('contact', Object.fromEntries(new FormData(form)))
+      trackEvent('contact_submit')
+      form.reset()
+      setStatus('sent')
+    } catch (err) {
+      console.error('Contact form submit failed:', err)
+      setStatus('error')
+    }
+  }
+
   const map = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d318189.6443930289!2d7.285402285604413!3d9.024558535341239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e745f4cd62fd9%3A0x53bd17b4a20ea12b!2sAbuja%2C%20Federal%20Capital%20Territory%2C%20Nigeria!5e1!3m2!1sen!2sde!4v1779115089907!5m2!1sen!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade'
 
   return (
@@ -37,14 +56,26 @@ const Contact = () => {
               </div>
             </div>
 
-            <form action=''>
+            <form name="contact" onSubmit={handleSubmit}>
               <div className='flexSB'>
-                <input type='text' placeholder='Name' />
-                <input type='email' placeholder='Email' />
+                <input type='text' name='name' placeholder='Name' />
+                <input type='email' name='email' placeholder='Email' required />
               </div>
-              <input type='text' placeholder='Subject' />
-              <textarea cols='30' rows='10' placeholder='Create a message here...'></textarea>
-              <button className='primary-btn'>SEND MESSAGE</button>
+              <input type='text' name='subject' placeholder='Subject' />
+              <textarea name='message' cols='30' rows='10' placeholder='Create a message here...' required></textarea>
+              <button type='submit' className='primary-btn' disabled={status === 'sending'}>
+                {status === 'sending' ? 'SENDING...' : 'SEND MESSAGE'}
+              </button>
+              {status === 'sent' && (
+                <p role="status" style={{ color: '#1ba415', marginTop: '10px' }}>
+                  Thank you! Your message has been sent. We will reply by email.
+                </p>
+              )}
+              {status === 'error' && (
+                <p role="alert" style={{ color: '#be3526', marginTop: '10px' }}>
+                  Sorry, your message could not be sent. Please email info@lgifoundation.org instead.
+                </p>
+              )}
             </form>
 
             <h3>Follow us here</h3>
