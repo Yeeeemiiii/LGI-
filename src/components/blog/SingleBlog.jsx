@@ -4,6 +4,7 @@ import { db } from '../../firebase'
 import { doc, getDoc, collection, addDoc, onSnapshot, query, orderBy } from 'firebase/firestore'
 
 import { blog as fallbackData } from '../../dummydata'
+import Seo from '../common/seo/Seo'
 import './blog.css'
 
 const SingleBlog = () => {
@@ -50,10 +51,24 @@ const SingleBlog = () => {
     }
   }
 
-  if (!post) return <h2 style={{ textAlign: 'center', padding: '100px' }}>Loading Article...</h2>
+  if (!post) {
+    return (
+      <>
+        <Seo title="Blog Article | LGI" path={`/blog/${id}`} />
+        <h2 style={{ textAlign: 'center', padding: '100px' }}>Loading Article...</h2>
+      </>
+    )
+  }
+
+  const summary = (post.desc || '').replace(/\s+/g, ' ').trim().slice(0, 155).trim()
 
   return (
     <section className="single-blog padding" style={{ minHeight: '100vh', backgroundColor: '#f8f8f8' }}>
+      <Seo
+        title={`${post.title} | LGI`}
+        description={summary || undefined}
+        path={`/blog/${id}`}
+      />
       <div className="container shadow" style={{ backgroundColor: '#fff', padding: '40px', borderRadius: '8px', maxWidth: '800px', margin: 'auto' }}>
         
         <Link to="/blog" style={{ color: '#be3526', fontWeight: '600', textDecoration: 'none', display: 'block', marginBottom: '20px' }}>
